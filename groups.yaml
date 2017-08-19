@@ -1,0 +1,47 @@
+default_view:
+  view: yes
+  icon: mdi:home 
+  entities:
+    - scene.hjemme
+    - scene.natta
+
+lys:
+  view: yes
+  icon: mdi:lightbulb-outline
+  entities:
+    - group.spisestua
+    - group.soverommet
+    - group.gjesterommet
+
+media:
+  view: yes
+  name: Media
+  entities:
+    - media_player.samsung_tv_remote
+    - media_player.stua
+    - media_player.shield_android_tvt 
+
+stove:
+  view: yes
+  name: Neato
+  entities:
+    - camera.stve_cleaning_map
+    - sensor.stve_battery
+    - sensor.stve_status
+    - switch.stve_clean
+    - switch.stve_schedule
+
+spisestua:
+  name: Spisestua
+  entities:
+    - light.nuppelampa
+
+soverommet:
+  name: Soverommet
+  entities:
+    - light.soverommet
+
+gjesterommet:
+  name: Gjesterommet
+  entities:
+    - light.gjesterommet

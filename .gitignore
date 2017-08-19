@@ -1,0 +1,7 @@
+secrets.yaml
+html5_push_registrations.conf
+phue.conf
+plex.conf
+.uuid
+home-assistant.log
+tts/

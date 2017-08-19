@@ -1,0 +1,13 @@
+- name: Hjemme
+  entities:
+    light.nuppelampa: on
+    light.gjesterommet: on
+    light.soverommet: on
+    media_player.samsung_tv_remote: on
+
+- name: Natta
+  entities:
+    light.gjesterommet: off
+    light.nuppelampa: off
+    media_player.samsung_tv_remote: off
+
