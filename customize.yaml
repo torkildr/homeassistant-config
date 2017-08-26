@@ -16,3 +16,9 @@ switch.gangen_switch:
 light.spisestua_level:
   friendly_name: Spisestua
 
+light.stua_level:
+  friendly_name: Stua
+
+light.kjokken_level:
+  friendly_name: Kjøkken
+

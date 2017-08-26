@@ -38,6 +38,7 @@ spisestua:
 stua:
   name: Stua
   entities:
+    - light.stua_level
     - switch.vinduet_switch
 
 gangen:
