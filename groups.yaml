@@ -9,6 +9,7 @@ default_view:
     - group.gjesterommet
     - group.gangen
     - group.stua
+    - group.kjokken
 
 media:
   view: yes
@@ -40,6 +41,11 @@ stua:
   entities:
     - light.stua_level
     - switch.vinduet_switch
+
+kjokken:
+  name: Kjøkken
+  entities:
+    - light.kjokken_level
 
 gangen:
   name: Gangen
