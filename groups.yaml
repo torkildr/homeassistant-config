@@ -4,14 +4,11 @@ default_view:
   entities:
     - scene.hjemme
     - scene.natta
-
-lys:
-  view: yes
-  icon: mdi:lightbulb-outline
-  entities:
     - group.spisestua
     - group.soverommet
     - group.gjesterommet
+    - group.gangen
+    - group.stua
 
 media:
   view: yes
@@ -25,16 +22,28 @@ stove:
   view: yes
   name: Neato
   entities:
-    - camera.stve_cleaning_map
     - sensor.stve_battery
     - sensor.stve_status
     - switch.stve_clean
     - switch.stve_schedule
+    - camera.stve_cleaning_map
 
 spisestua:
   name: Spisestua
   entities:
     - light.nuppelampa
+    - light.spisestua_level
+    - switch.vitrineskapet_switch
+
+stua:
+  name: Stua
+  entities:
+    - switch.vinduet_switch
+
+gangen:
+  name: Gangen
+  entities:
+    - switch.gangen_switch
 
 soverommet:
   name: Soverommet

@@ -1,0 +1,6 @@
+zwave._:
+  ignored: false
+  polling_intensity: 0
+switch.switch:
+  ignored: false
+  polling_intensity: 0

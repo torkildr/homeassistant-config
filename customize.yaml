@@ -4,4 +4,15 @@ group.all_lights:
 group.all_switches:
   hidden: false
 
+switch.vitrineskapet_switch:
+  friendly_name: Vitrineskapet
+
+switch.vinduet_switch:
+  friendly_name: Vinduet
+
+switch.gangen_switch:
+  friendly_name: Gangen
+
+light.spisestua_level:
+  friendly_name: Spisestua
 

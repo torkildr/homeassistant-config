@@ -5,3 +5,6 @@ plex.conf
 .uuid
 home-assistant.log
 tts/
+OZW_Log.txt
+pyozw.sqlite
+

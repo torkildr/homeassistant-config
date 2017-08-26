@@ -20,6 +20,10 @@ recorder:
   db_url: !secret db_url
   purge_days: 90
 
+zwave:
+  usb_path: /dev/ttyACM0
+  network_key: !secret zwave_key
+
 neato:
   username: !secret neato_user
   password: !secret neato_pass
