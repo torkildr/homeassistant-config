@@ -1,13 +1,28 @@
-- name: Hjemme
+- name: På
   entities:
-    light.nuppelampa: on
-    light.gjesterommet: on
-    light.soverommet: on
-    media_player.samsung_tv_remote: on
+    light.nuppelampa:
+      state: on
+      xy_color: [0.4643, 0.4115]
+      brightness: 142
+    light.spisestua_level:
+      state: on
+      brightness: 70
+    switch.vitrineskapet_switch: on
+    light.stua_level:
+      state: on
+      brightness: 95
+    switch.vinduet_switch: on
+    light.kjokken_level:
+      state: on
+      brightness: 75
+    switch.gangen_switch: on
 
-- name: Natta
+- name: Av
   entities:
-    light.gjesterommet: off
     light.nuppelampa: off
-    media_player.samsung_tv_remote: off
-
+    light.spisestua_level: off
+    switch.vitrineskapet_switch: off
+    light.stua_level: off
+    switch.vinduet_switch: off
+    light.kjokken_level: off
+    switch.gangen_switch: off

@@ -2,8 +2,8 @@ default_view:
   view: yes
   icon: mdi:home 
   entities:
-    - scene.hjemme
-    - scene.natta
+    - scene.pa
+    - scene.av
     - group.spisestua
     - group.soverommet
     - group.gjesterommet
