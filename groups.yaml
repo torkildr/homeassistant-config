@@ -2,6 +2,9 @@ default_view:
   view: yes
   icon: mdi:home 
   entities:
+    - sensor.yr_symbol
+    - sun.sun
+    - updater.updater
     - scene.pa
     - scene.av
     - group.spisestua

@@ -66,6 +66,9 @@ sun:
 # Weather prediction
 sensor:
   - platform: yr
+    name: Weather
+      - temperature
+      - symbol
 
 # Text to speech
 tts:
