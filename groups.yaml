@@ -21,7 +21,7 @@ sensors:
 
 media:
   view: yes
-  name: Media
+  icon: mdi:projector-screen
   entities:
     - media_player.samsung_tv_remote
     - media_player.stua
@@ -29,7 +29,7 @@ media:
 
 stove:
   view: yes
-  name: Neato
+  icon: mdi:broom
   entities:
     - sensor.stve_battery
     - sensor.stve_status
