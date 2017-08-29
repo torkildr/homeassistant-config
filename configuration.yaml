@@ -23,6 +23,8 @@ recorder:
 zwave:
   usb_path: /dev/ttyACM0
   network_key: !secret zwave_key
+  device_config: !include zwave_device_config.yaml
+  device_config_glob: !include zwave_device_config_glob.yaml
 
 neato:
   username: !secret neato_user
@@ -66,9 +68,6 @@ sun:
 # Weather prediction
 sensor:
   - platform: yr
-    name: Weather
-      - temperature
-      - symbol
 
 # Text to speech
 tts:

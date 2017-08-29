@@ -2,8 +2,6 @@ default_view:
   view: yes
   icon: mdi:home 
   entities:
-    - sensor.yr_symbol
-    - sun.sun
     - updater.updater
     - scene.pa
     - scene.av
@@ -13,6 +11,13 @@ default_view:
     - group.gangen
     - group.stua
     - group.kjokken
+
+sensors:
+  view: yes
+  icon: mdi:speedometer
+  entities:
+    - group.power_sensors
+    - group.energy_sensors
 
 media:
   view: yes
@@ -64,3 +69,20 @@ gjesterommet:
   name: Gjesterommet
   entities:
     - light.gjesterommet
+
+power_sensors:
+  name: Effekt
+  entities:
+    - sensor.gangen_power
+    - sensor.kjokken_power
+    - sensor.stua_power
+    - sensor.spisestua_power
+
+energy_sensors:
+  name: Forbruk
+  entities:
+    - sensor.gangen_energy
+    - sensor.kjokken_energy
+    - sensor.stua_energy
+    - sensor.spisestua_energy
+
