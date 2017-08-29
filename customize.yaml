@@ -4,6 +4,9 @@ group.all_lights:
 group.all_switches:
   hidden: false
 
+group.all_automations:
+  hidden: false
+
 switch.vitrineskapet_switch:
   friendly_name: Vitrineskapet
 
@@ -12,6 +15,9 @@ switch.vinduet_switch:
 
 switch.gangen_switch:
   friendly_name: Gangen
+
+switch.plantelampa_switch:
+  friendly_name: Plantelampa
 
 light.spisestua_level:
   friendly_name: Spisestua

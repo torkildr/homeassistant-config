@@ -37,6 +37,12 @@ stove:
     - switch.stve_schedule
     - camera.stve_cleaning_map
 
+automation:
+  view: yes
+  icon: mdi:robot
+  entities:
+    - group.all_automations
+
 spisestua:
   name: Spisestua
   entities:
@@ -69,6 +75,7 @@ gjesterommet:
   name: Gjesterommet
   entities:
     - light.gjesterommet
+    - switch.plantelampa_switch
 
 power_sensors:
   name: Effekt
@@ -77,6 +84,7 @@ power_sensors:
     - sensor.kjokken_power
     - sensor.stua_power
     - sensor.spisestua_power
+    - sensor.plantelampa_power
 
 energy_sensors:
   name: Forbruk
@@ -85,4 +93,5 @@ energy_sensors:
     - sensor.kjokken_energy
     - sensor.stua_energy
     - sensor.spisestua_energy
+    - sensor.plantelampa_energy
 

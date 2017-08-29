@@ -1,1 +1,19 @@
-[]
+- action:
+  - data:
+      entity_id: switch.plantelampa_switch
+    service: switch.turn_on
+  alias: "Plantelampa: På om morgenen"
+  condition: []
+  trigger:
+  - at: "08:00"
+    platform: time
+
+- action:
+  - data:
+      entity_id: switch.plantelampa_switch
+    service: switch.turn_off
+  alias: "Plantelampa: Av om natta"
+  condition: []
+  trigger:
+  - at: "22:00"
+    platform: time
