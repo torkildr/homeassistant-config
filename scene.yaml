@@ -6,7 +6,7 @@
       brightness: 142
     light.spisestua_level:
       state: on
-      brightness: 70
+      brightness: 100
     switch.vitrineskapet_switch: on
     light.stua_level:
       state: on

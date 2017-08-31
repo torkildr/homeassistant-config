@@ -5,6 +5,7 @@ group.all_switches:
   hidden: false
 
 group.all_automations:
+  friendly_name: Automations
   hidden: false
 
 switch.vitrineskapet_switch:
