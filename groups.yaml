@@ -3,14 +3,17 @@ default_view:
   icon: mdi:home 
   entities:
     - updater.updater
-    - scene.pa
-    - scene.av
+    - group.scener
     - group.spisestua
     - group.soverommet
     - group.gjesterommet
     - group.gangen
     - group.stua
     - group.kjokken
+    - group.scener
+    - scene.pa
+    - scene.helt_av
+    - scene.natta
 
 sensors:
   view: yes

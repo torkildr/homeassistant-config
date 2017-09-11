@@ -17,7 +17,7 @@
       brightness: 75
     switch.gangen_switch: on
 
-- name: Av
+- name: Natta
   entities:
     light.nuppelampa: off
     light.spisestua_level: off
@@ -26,3 +26,16 @@
     switch.vinduet_switch: off
     light.kjokken_level: off
     switch.gangen_switch: off
+
+- name: Helt Av
+  entities:
+    light.soverommet: off
+    light.gjesterommet: off
+    light.nuppelampa: off
+    light.spisestua_level: off
+    switch.vitrineskapet_switch: off
+    light.stua_level: off
+    switch.vinduet_switch: off
+    light.kjokken_level: off
+    switch.gangen_switch: off
+
