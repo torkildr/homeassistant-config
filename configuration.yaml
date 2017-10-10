@@ -18,7 +18,8 @@ frontend:
 
 recorder:
   db_url: !secret db_url
-  purge_days: 7
+  purge_interval: 1
+  purge_keep_days: 7
 
 zwave:
   usb_path: /dev/ttyACM0
@@ -29,6 +30,11 @@ zwave:
 neato:
   username: !secret neato_user
   password: !secret neato_pass
+
+emulated_hue:
+  listen_port: 8300
+  advertise_ip: 192.168.1.135
+  expose_by_default: false
 
 notify:
   - name: web
