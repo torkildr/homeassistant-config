@@ -1,0 +1,81 @@
+- platform: yr
+- platform: mqtt
+  name: habanero_moisture
+  state_topic: plants/flower_care_1/
+  value_template: '{{ value_json.moisture }}'
+- platform: mqtt
+  name: habanero_battery
+  state_topic: plants/flower_care_1/
+  value_template: '{{ value_json.battery }}'
+- platform: mqtt
+  name: habanero_temperature
+  state_topic: plants/flower_care_1/
+  value_template: '{{ value_json.temperature }}'
+- platform: mqtt
+  name: habanero_conductivity
+  state_topic: plants/flower_care_1/
+  value_template: '{{ value_json.conductivity }}'
+- platform: mqtt
+  name: habanero_brightness
+  state_topic: plants/flower_care_1/
+  value_template: '{{ value_json.brightness }}'
+- platform: mqtt
+  name: cayenne_moisture
+  state_topic: plants/flower_care_2/
+  value_template: '{{ value_json.moisture }}'
+- platform: mqtt
+  name: cayenne_battery
+  state_topic: plants/flower_care_2/
+  value_template: '{{ value_json.battery }}'
+- platform: mqtt
+  name: cayenne_temperature
+  state_topic: plants/flower_care_2/
+  value_template: '{{ value_json.temperature }}'
+- platform: mqtt
+  name: cayenne_conductivity
+  state_topic: plants/flower_care_2/
+  value_template: '{{ value_json.conductivity }}'
+- platform: mqtt
+  name: cayenne_brightness
+  state_topic: plants/flower_care_2/
+  value_template: '{{ value_json.brightness }}'
+- platform: mqtt
+  name: jalapeno_moisture
+  state_topic: plants/flower_care_3/
+  value_template: '{{ value_json.moisture }}'
+- platform: mqtt
+  name: jalapeno_battery
+  state_topic: plants/flower_care_3/
+  value_template: '{{ value_json.battery }}'
+- platform: mqtt
+  name: jalapeno_temperature
+  state_topic: plants/flower_care_3/
+  value_template: '{{ value_json.temperature }}'
+- platform: mqtt
+  name: jalapeno_conductivity
+  state_topic: plants/flower_care_3/
+  value_template: '{{ value_json.conductivity }}'
+- platform: mqtt
+  name: jalapeno_brightness
+  state_topic: plants/flower_care_3/
+  value_template: '{{ value_json.brightness }}'
+- platform: mqtt
+  name: thai_moisture
+  state_topic: plants/flower_care_4/
+  value_template: '{{ value_json.moisture }}'
+- platform: mqtt
+  name: thai_battery
+  state_topic: plants/flower_care_4/
+  value_template: '{{ value_json.battery }}'
+- platform: mqtt
+  name: thai_temperature
+  state_topic: plants/flower_care_4/
+  value_template: '{{ value_json.temperature }}'
+- platform: mqtt
+  name: thai_conductivity
+  state_topic: plants/flower_care_4/
+  value_template: '{{ value_json.conductivity }}'
+- platform: mqtt
+  name: thai_brightness
+  state_topic: plants/flower_care_4/
+  value_template: '{{ value_json.brightness }}'

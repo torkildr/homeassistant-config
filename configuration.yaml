@@ -16,6 +16,8 @@ homeassistant:
 # Enables the frontend
 frontend:
 
+mqtt:
+
 recorder:
   db_url: !secret db_url
   purge_interval: 1
@@ -72,8 +74,7 @@ logbook:
 sun:
 
 # Weather prediction
-sensor:
-  - platform: yr
+sensor: !include sensors.yaml
 
 # Text to speech
 tts:
