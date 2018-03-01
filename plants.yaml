@@ -1,0 +1,28 @@
+habanero:
+  sensors:
+    moisture: sensor.habanero_moisture
+    battery: sensor.habanero_battery
+    temperature: sensor.habanero_temperature
+    conductivity: sensor.habanero_conductivity
+    brightness: sensor.habanero_brightness
+cayenne:
+  sensors:
+    moisture: sensor.cayenne_moisture
+    battery: sensor.cayenne_battery
+    temperature: sensor.cayenne_temperature
+    conductivity: sensor.cayenne_conductivity
+    brightness: sensor.cayenne_brightness
+thai:
+  sensors:
+    moisture: sensor.thai_moisture
+    battery: sensor.thai_battery
+    temperature: sensor.thai_temperature
+    conductivity: sensor.thai_conductivity
+    brightness: sensor.thai_brightness
+jalapeno:
+  sensors:
+    moisture: sensor.jalapeno_moisture
+    battery: sensor.jalapeno_battery
+    temperature: sensor.jalapeno_temperature
+    conductivity: sensor.jalapeno_conductivity
+    brightness: sensor.jalapeno_brightness

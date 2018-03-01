@@ -40,6 +40,15 @@ stove:
     - switch.stve_schedule
     - camera.stve_cleaning_map
 
+plants:
+  view: yes
+  icon: mdi:flower
+  entities:
+    - plant.cayenne
+    - plant.jalapeno
+    - plant.thai
+    - plant.habanero
+
 automation:
   view: yes
   icon: mdi:robot

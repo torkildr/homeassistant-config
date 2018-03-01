@@ -7,4 +7,4 @@ home-assistant.log
 tts/
 OZW_Log.txt
 pyozw.sqlite
-
+entity_registry.yaml
