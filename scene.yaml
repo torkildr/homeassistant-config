@@ -2,7 +2,7 @@
   entities:
     light.nuppelampa:
       state: on
-      xy_color: [0.4643, 0.4115]
+      color_temp: 432
       brightness: 142
     light.spisestua_level:
       state: on
