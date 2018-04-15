@@ -1,3 +1,4 @@
+
 default_view:
   view: yes
   icon: mdi:home 
@@ -14,7 +15,7 @@ default_view:
     - scene.pa
     - scene.helt_av
     - scene.natta
-
+    - group.display
 sensors:
   view: yes
   icon: mdi:speedometer
@@ -106,4 +107,10 @@ energy_sensors:
     - sensor.stua_energy
     - sensor.spisestua_energy
     - sensor.plantelampa_energy
+
+display:
+  name: Display
+  entities:
+    - input_text.display_mode
+    - input_text.display_text
 
