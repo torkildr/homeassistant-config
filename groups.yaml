@@ -111,6 +111,6 @@ energy_sensors:
 display:
   name: Display
   entities:
-    - input_text.display_mode
+    - input_select.display_mode
     - input_text.display_text
 
