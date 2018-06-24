@@ -95,3 +95,7 @@ input_select:
       - Text
       - Date
 
+input_boolean:
+  display_time:
+    name: Show Time
+

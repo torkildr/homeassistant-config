@@ -113,4 +113,5 @@ display:
   entities:
     - input_select.display_mode
     - input_text.display_text
+    - input_bool.display_time
 
