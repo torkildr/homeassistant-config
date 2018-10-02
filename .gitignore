@@ -10,3 +10,6 @@ pyozw.sqlite
 entity_registry.yaml
 home-assistant_v2.db
 .config_entries.json
+core
+deps
+.storage

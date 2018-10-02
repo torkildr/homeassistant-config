@@ -13,10 +13,17 @@ homeassistant:
 
   customize: !include customize.yaml
 
+  # auth is done in reverse proxy
+  auth_providers:
+    - type: trusted_networks
+    - type: legacy_api_password
+
 # Enables the frontend
 frontend:
 
 mqtt:
+  username: homeassistant
+  password: !secret mqtt_password
 
 influxdb:
 
@@ -56,6 +63,8 @@ config:
 http:
   use_x_forwarded_for: true
   trusted_proxies: 172.18.0.0/24
+  trusted_networks: 0.0.0.0/0
+  api_password: !secret http_password
 
 updater:
 
