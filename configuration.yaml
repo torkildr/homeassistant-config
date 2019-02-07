@@ -92,20 +92,20 @@ tts:
 
 group: !include groups.yaml
 automation: !include automations.yaml
-scene: !include scene.yaml
+#scene: !include scene.yaml
 plant: !include plants.yaml
 
-input_text:
-  display_text:
-    name: Text
-
-input_select:
-  display_mode:
-    options:
-      - Text
-      - Date
-
-input_boolean:
-  display_time:
-    name: Show Time
-
+#input_text:
+#  display_text:
+#    name: Text
+#
+#input_select:
+#  display_mode:
+#    options:
+#      - Text
+#      - Date
+#
+#input_boolean:
+#  display_time:
+#    name: Show Time
+#

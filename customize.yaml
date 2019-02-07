@@ -1,13 +1,3 @@
-group.all_lights:
-  hidden: false
-
-group.all_switches:
-  hidden: false
-
-group.all_automations:
-  friendly_name: Automations
-  hidden: false
-
 switch.vitrineskapet_switch:
   friendly_name: Vitrineskapet
   emulated_hue_hidden: false
