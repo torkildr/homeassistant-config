@@ -1,51 +1,42 @@
 switch.vitrineskapet_switch:
   friendly_name: Vitrineskapet
   emulated_hue_hidden: false
-  emulated_hue_name: "cabinet"
-
+  emulated_hue_name: cabinet
 switch.vinduet_switch:
   friendly_name: Vinduet
   emulated_hue_hidden: false
-  emulated_hue_name: "window"
-
+  emulated_hue_name: window
 switch.gangen_switch:
   friendly_name: Gangen
   emulated_hue_hidden: false
-  emulated_hue_name: "hallway"
-
+  emulated_hue_name: hallway
 switch.plantelampa_switch:
   friendly_name: Plantelampa
   emulated_hue_hidden: false
-  emulated_hue_name: "plant lamp"
-
+  emulated_hue_name: plant lamp
 light.spisestua_level:
   friendly_name: Spisestua
   emulated_hue_hidden: false
-  emulated_hue_name: "dinner table"
-
+  emulated_hue_name: dinner table
 light.stua_level:
   friendly_name: Stua
   emulated_hue_hidden: false
-  emulated_hue_name: "living room"
-
+  emulated_hue_name: living room
 light.kjokken_level:
   friendly_name: Kjøkken
   emulated_hue_hidden: false
-  emulated_hue_name: "kitchen"
-
+  emulated_hue_name: kitchen
 light.soverommet:
   emulated_hue_hidden: false
-  emulated_hue_name: "bedroom"
-
+  emulated_hue_name: bedroom
 light.gjesterommet:
   emulated_hue_hidden: false
-  emulated_hue_name: "guestroom"
-
+  emulated_hue_name: guestroom
 light.nuppelampa:
   emulated_hue_hidden: false
-  emulated_hue_name: "nipple lamp"
-
+  emulated_hue_name: nipple lamp
 media_player.samsung_tv_remote:
   emulated_hue_hidden: false
-  emulated_hue_name: "tv"
-
+  emulated_hue_name: tv
+zwave.kjokken:
+  node_name: Gangen Nede
