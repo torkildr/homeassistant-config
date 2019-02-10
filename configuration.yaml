@@ -18,8 +18,9 @@ homeassistant:
     - type: trusted_networks
     - type: legacy_api_password
 
-# Enables the frontend
 frontend:
+
+system_health:
 
 mqtt:
   username: homeassistant
