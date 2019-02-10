@@ -58,6 +58,10 @@ media_player:
     port: 8001
     mac: !secret samsungtv_mac
 
+tibber:
+  access_token: !secret tibber_token
+
+
 # Enables configuration UI
 config:
 
