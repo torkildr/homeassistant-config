@@ -85,6 +85,13 @@ history:
 # View all events in a logbook
 logbook:
 
+logger:
+  default: info
+  logs:
+    pydeconz: debug
+    homeassistant.components.deconz: debug
+
+
 # Track the sun
 sun:
 
