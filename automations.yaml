@@ -24,3 +24,17 @@
   - data:
       entity_id: light.stue_vegg_level
     service: light.turn_off
+- id: '1550001835411'
+  alias: 'The Button #1, 1 click'
+  trigger:
+  - event_data:
+      entity_id: zwave.fibaro_button_1
+      scene_data: 1
+      scene_id: 1
+    event_type: zwave.scene_activated
+    platform: event
+  condition: []
+  action:
+  - data:
+      entity_id: light.stue_vegg_level
+    service: light.toggle
