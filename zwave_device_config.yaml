@@ -1,0 +1,9 @@
+light.kjeller_tak_level_2:
+  ignored: true
+  polling_intensity: 0
+light.kjeller_vegg_level_2:
+  ignored: true
+  polling_intensity: 0
+sensor.kjeller_vegg_power_2:
+  ignored: true
+  polling_intensity: 0
