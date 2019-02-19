@@ -38,3 +38,17 @@
   - data:
       entity_id: switch.gang_oppe_switch
     service: switch.toggle
+- id: '1550606425406'
+  alias: Keyfob Car, Square Hold
+  trigger:
+  - event_data:
+      entity_id: zwave.fibaro_keyfob_carkey
+      scene_data: 7800
+      scene_id: 1
+    event_type: zwave.scene_activated
+    platform: event
+  condition: []
+  action:
+  - data:
+      entity_id: switch.garasjeport
+    service: switch.turn_on
