@@ -18,6 +18,8 @@ homeassistant:
     - type: trusted_networks
     - type: legacy_api_password
 
+default_config:
+
 frontend:
 
 system_health:
@@ -56,7 +58,6 @@ media_player:
   - platform: samsungtv
     host: !secret samsungtv_ip
     port: 8001
-    mac: !secret samsungtv_mac
 
 tibber:
   access_token: !secret tibber_token
