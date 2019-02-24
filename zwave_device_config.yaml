@@ -7,3 +7,9 @@ light.kjeller_vegg_level_2:
 sensor.kjeller_vegg_power_2:
   ignored: true
   polling_intensity: 0
+switch.kjeller_bod_2:
+  ignored: true
+  polling_intensity: 0
+switch.yttergang_2:
+  ignored: true
+  polling_intensity: 0
