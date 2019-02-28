@@ -1,0 +1,14 @@
+- name: Alt av
+  entities:
+    switch.gang_oppe: false
+    light.gang_nede: false
+    switch.yttergang: false
+    light.stue_vegg: false
+    switch.stue_vindu: false
+    switch.vitrineskapet: false
+    light.kjeller_tak: false
+    light.kjeller_vegg: false
+    switch.kjeller_bod: false
+    switch.treningsrom_tak: false
+    switch.treningsrom_spot: false
+
