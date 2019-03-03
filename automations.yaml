@@ -52,3 +52,18 @@
   - data:
       entity_id: switch.garasjeport
     service: switch.turn_on
+- id: '1551629601000'
+  alias: Keyfob Car, Cross Hold
+  trigger:
+  - event_data:
+      entity_id: zwave.fibaro_keyfob_carkey
+      scene_data: 7800
+      scene_id: 3
+    event_type: zwave.scene_activated
+    platform: event
+  condition: []
+  action:
+  - data:
+      entity_id: lock.hoveddor
+      code: !secret verisure_pin
+    service: lock.unlock
