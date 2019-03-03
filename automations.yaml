@@ -67,3 +67,19 @@
       entity_id: lock.hoveddor
       code: !secret verisure_pin
     service: lock.unlock
+- id: '1551651260765'
+  alias: Motion Gang
+  trigger:
+  - entity_id: sensor.gang_motion
+    from: '0'
+    platform: state
+    to: '8'
+  condition:
+  - condition: state
+    entity_id: switch.yttergang
+    state: '0'
+  action:
+  - alias: ''
+    data:
+      entity_id: scene.gang_pa
+    service: scene.turn_on
