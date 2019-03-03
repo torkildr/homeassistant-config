@@ -12,3 +12,11 @@
     switch.treningsrom_tak: false
     switch.treningsrom_spot: false
 
+- name: Gang På
+  entities:
+    switch.gang_oppe: true
+    light.gang_nede:
+      state: true
+      brightness: 178
+    switch.yttergang: true
+

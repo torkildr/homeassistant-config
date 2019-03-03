@@ -77,9 +77,8 @@
   condition:
   - condition: state
     entity_id: switch.yttergang
-    state: '0'
+    state: 'off'
   action:
-  - alias: ''
-    data:
+  - data:
       entity_id: scene.gang_pa
     service: scene.turn_on
