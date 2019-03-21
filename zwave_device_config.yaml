@@ -13,3 +13,6 @@ switch.kjeller_bod_2:
 switch.yttergang_2:
   ignored: true
   polling_intensity: 0
+sensor.kjeller_tak_power_2:
+  ignored: true
+  polling_intensity: 0
