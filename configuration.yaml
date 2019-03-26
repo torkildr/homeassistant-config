@@ -18,7 +18,6 @@ homeassistant:
     - type: trusted_networks
       trusted_networks:
       - 0.0.0.0/0
-    - type: legacy_api_password
 
 default_config:
 
@@ -75,7 +74,6 @@ config:
 http:
   use_x_forwarded_for: true
   trusted_proxies: 172.18.0.0/24
-  api_password: !secret http_password
 
 updater:
 
