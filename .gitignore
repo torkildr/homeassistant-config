@@ -13,3 +13,4 @@ home-assistant_v2.db
 core
 deps
 .storage
+.cloud

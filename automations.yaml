@@ -43,7 +43,7 @@
   trigger:
   - event_data:
       entity_id: zwave.fibaro_keyfob_carkey
-      scene_data: 7800
+      scene_data: 7680
       scene_id: 1
     event_type: zwave.scene_activated
     platform: event
@@ -57,7 +57,7 @@
   trigger:
   - event_data:
       entity_id: zwave.fibaro_keyfob_carkey
-      scene_data: 7800
+      scene_data: 7680
       scene_id: 3
     event_type: zwave.scene_activated
     platform: event
