@@ -8,3 +8,7 @@ switch.vitrineskapet_switch:
   friendly_name: Vitrineskap
 binary_sensor.garasjeport:
   device_class: garage_door
+script.garasje_apne:
+  icon: mdi:arrow-up-bold
+script.garasje_lukk:
+  icon: mdi:arrow-down-bold
