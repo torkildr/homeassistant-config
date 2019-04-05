@@ -105,6 +105,7 @@ group: !include groups.yaml
 automation: !include automations.yaml
 scene: !include scene.yaml
 plant: !include plants.yaml
+script: !include scripts.yaml
 
 #input_text:
 #  display_text:

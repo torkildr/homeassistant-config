@@ -1,0 +1,18 @@
+garasje_apne:
+  alias: Åpne Garasjeport
+  sequence:
+  - condition: state
+    entity_id: binary_sensor.garasjeport
+    state: 'off'
+  - data:
+      entity_id: switch.garasjeport
+    service: switch.turn_on
+garasje_lukk:
+  alias: Lukke Garasjeport
+  sequence:
+  - condition: state
+    entity_id: binary_sensor.garasjeport
+    state: 'on'
+  - data:
+      entity_id: switch.garasjeport
+    service: switch.turn_on
