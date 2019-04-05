@@ -6,3 +6,5 @@ light.stue_vegg_level:
   friendly_name: Stue Vegg
 switch.vitrineskapet_switch:
   friendly_name: Vitrineskap
+binary_sensor.garasjeport:
+  device_class: garage_door
