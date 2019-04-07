@@ -16,3 +16,10 @@ garasje_lukk:
   - data:
       entity_id: switch.garasjeport
     service: switch.turn_on
+hoveddor_apne:
+  alias: Åpne dør
+  sequence:
+  - data:
+      code: !secret verisure_pin
+      entity_id: lock.hoveddor
+    service: lock.unlock
