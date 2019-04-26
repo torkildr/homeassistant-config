@@ -107,3 +107,16 @@
   condition: []
   action:
   - service: script.hoveddor_apne
+- id: '1556193117274'
+  alias: Garasjeport Åpen
+  trigger:
+  - entity_id: binary_sensor.garasjeport
+    for: 01:00:00
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - data:
+      message: Garasjeport har vært lenge åpen. Kanskje vurdere å lukke?
+      title: Garasjeport åpen
+    service: notify.web

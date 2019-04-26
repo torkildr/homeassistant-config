@@ -1,16 +1,10 @@
 homeassistant:
-  # Name of the location where Home Assistant is running
   name: Home
-  # Location required to calculate the time the sun rises and sets
   latitude: !secret latitude
   longitude: !secret longitude
-  # Impacts weather/sunrise data (altitude above sea level in meters)
   elevation: !secret altitude
-  # metric for Metric, imperial for Imperial
   unit_system: metric
-  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone: Europe/Amsterdam
-
   customize: !include customize.yaml
 
   # auth is done in reverse proxy
@@ -22,6 +16,9 @@ homeassistant:
 default_config:
 
 frontend:
+
+lovelace:
+  mode: yaml
 
 system_health:
 
@@ -69,7 +66,6 @@ tibber:
   access_token: !secret tibber_token
 
 
-# Enables configuration UI
 config:
 
 http:
@@ -78,19 +74,14 @@ http:
 
 updater:
 
-# Discover some devices automatically
-discovery:
+  discovery:
 
-# Allows you to issue voice commands from the frontend in enabled browsers
 conversation:
 
-# Enables support for tracking state changes over time
 history:
 
-# View all events in a logbook
 logbook:
 
-# Track the sun
 sun:
 
 sensor: !include sensors.yaml
@@ -98,7 +89,6 @@ sensor: !include sensors.yaml
 weather:
   - platform: met
 
-# Text to speech
 tts:
   - platform: google_translate
     service_name: google_say
@@ -108,18 +98,3 @@ automation: !include automations.yaml
 scene: !include scene.yaml
 plant: !include plants.yaml
 script: !include scripts.yaml
-
-#input_text:
-#  display_text:
-#    name: Text
-#
-#input_select:
-#  display_mode:
-#    options:
-#      - Text
-#      - Date
-#
-#input_boolean:
-#  display_time:
-#    name: Show Time
-#

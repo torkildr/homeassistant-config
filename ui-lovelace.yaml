@@ -1,0 +1,63 @@
+title: Home
+views:
+  - badges:
+      - lock.hoveddor
+      - sensor.gang_temperature
+      - binary_sensor.garasjeport
+    title: Home
+    cards:
+      - entities:
+          - entity: switch.gang_oppe
+          - entity: light.gang_nede
+          - entity: switch.yttergang
+        title: Gang
+        type: entities
+      - entities:
+          - entity: light.stue_vegg
+          - entity: switch.stue_vindu
+          - entity: switch.vitrineskapet
+        title: Stue
+        type: entities
+      - entities:
+          - entity: light.kjeller_tak
+          - entity: light.kjeller_vegg
+          - entity: switch.kjeller_bod
+        title: Kjeller
+        type: entities
+      - entities:
+          - entity: switch.treningsrom_tak
+          - entity: switch.treningsrom_spot
+        title: Andre Etasje
+        type: entities
+      - entities:
+          - entity: media_player.kitchen
+          - entity: media_player.livingroom
+          - entity: media_player.bedroom
+        show_header_toggle: false
+        title: Sonos
+        type: entities
+      - type: vertical-stack
+        title: foo
+        cards:
+          - type: conditional
+            conditions:
+              - entity: binary_sensor.garasjeport
+                state: 'off'
+            card:
+              type: entities
+              title: Garasjeport
+              show_header_toggle: false
+              entities:
+                - entity: binary_sensor.garasjeport
+                - entity: script.garasje_apne
+          - type: conditional
+            conditions:
+              - entity: binary_sensor.garasjeport
+                state: 'on'
+            card:
+              type: entities
+              title: Garasjeport
+              show_header_toggle: false
+              entities:
+                - entity: binary_sensor.garasjeport
+                - entity: script.garasje_lukk
