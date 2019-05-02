@@ -61,3 +61,15 @@ views:
               entities:
                 - entity: binary_sensor.garasjeport
                 - entity: script.garasje_lukk
+      - type: entities
+        title: Terrasse
+        entities:
+          - entity: switch.terrassevarmer
+          - entity: sensor.terrassevarmer_power
+        show_header_toggle: false
+  - title: Strøm
+    cards:
+      - type: sensor
+        entity: sensor.electricity_price_home
+        graph: line
+        detail: 2
