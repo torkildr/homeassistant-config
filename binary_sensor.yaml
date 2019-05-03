@@ -1,0 +1,3 @@
+- platform: ping
+  host: ifi2-gw.uninett.no
+

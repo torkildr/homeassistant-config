@@ -12,3 +12,6 @@ script.garasje_apne:
   icon: mdi:arrow-up-bold
 script.garasje_lukk:
   icon: mdi:arrow-down-bold
+sensor.terrassevarmer_power:
+  device_class: power
+switch.terrassevarmer: {}
