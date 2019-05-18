@@ -1,4 +1,4 @@
 - platform: ping
   name: Internett
-  host: ifi2-gw.uninett.no
+  host: 1.1.1.1
 

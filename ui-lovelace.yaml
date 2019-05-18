@@ -14,14 +14,13 @@ views:
         type: entities
       - entities:
           - entity: light.stue_vegg
-          - entity: switch.stue_vindu
-          - entity: switch.vitrineskapet
         title: Stue
         type: entities
       - entities:
           - entity: light.kjeller_tak
           - entity: light.kjeller_vegg
           - entity: switch.kjeller_bod
+          - entity: switch.arbeidsbenk
         title: Kjeller
         type: entities
       - entities:
@@ -37,7 +36,6 @@ views:
         title: Sonos
         type: entities
       - type: vertical-stack
-        title: foo
         cards:
           - type: conditional
             conditions:

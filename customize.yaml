@@ -1,7 +1,8 @@
 light.gang_nede_level:
   friendly_name: Gang Nede
-switch.gang_oppe_switch:
+switch.gang_oppe:
   friendly_name: Gang Oppe
+  icon: mdi:lightbulb
 light.stue_vegg_level:
   friendly_name: Stue Vegg
 switch.vitrineskapet_switch:
@@ -14,4 +15,15 @@ script.garasje_lukk:
   icon: mdi:arrow-down-bold
 sensor.terrassevarmer_power:
   device_class: power
-switch.terrassevarmer: {}
+switch.terrassevarmer:
+  icon: mdi:radiator
+switch.yttergang:
+  icon: mdi:lightbulb
+switch.kjeller_bod:
+  icon: mdi:lightbulb
+switch.arbeidsbenk:
+  icon: mdi:lightbulb
+switch.treningsrom_tak:
+  icon: mdi:lightbulb
+switch.treningsrom_spot:
+  icon: mdi:lightbulb
