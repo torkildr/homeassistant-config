@@ -77,6 +77,28 @@
   action:
   - data: {}
     service: script.hoveddor_apne
+- id: '155821217700'
+  alias: Kjeller Bod Enter
+  trigger:
+  - entity_id: sensor.kjeller_bod_motion
+    from: '0'
+    platform: state
+    to: '8'
+  action:
+  - data:
+      entity_id: scene.kjeller_bod_pa
+    service: scene.turn_on
+- id: '155821217701'
+  alias: Kjeller Bod Exit
+  trigger:
+  - entity_id: sensor.kjeller_bod_motion
+    from: '8'
+    platform: state
+    to: '0'
+  action:
+  - data:
+      entity_id: scene.kjeller_bod_av
+    service: scene.turn_on
 - id: '1551651260765'
   alias: Motion Gang
   trigger:

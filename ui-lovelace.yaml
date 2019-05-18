@@ -3,6 +3,7 @@ views:
   - badges:
       - lock.hoveddor
       - sensor.gang_temperature
+      - sensor.kjeller_bod_temperature
       - binary_sensor.garasjeport
     title: Home
     cards:

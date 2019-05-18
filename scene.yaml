@@ -20,3 +20,13 @@
       brightness: 178
     switch.yttergang: true
 
+- name: Kjeller Bod På
+  entities:
+    switch.kjeller_bod: true
+    switch.arbeidsbenk: true
+
+- name: Kjeller Bod Av
+  entities:
+    switch.kjeller_bod: false
+    switch.arbeidsbenk: false
+
