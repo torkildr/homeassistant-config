@@ -1,9 +1,10 @@
 title: Home
 views:
   - badges:
-      - lock.hoveddor
+      - sensor.netatmo_indoor_temperature
       - sensor.gang_temperature
       - sensor.kjeller_bod_temperature
+      - lock.hoveddor
       - binary_sensor.garasjeport
     title: Home
     cards:
