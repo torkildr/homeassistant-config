@@ -92,9 +92,11 @@
   alias: Kjeller Bod Exit
   trigger:
   - entity_id: sensor.kjeller_bod_motion
+    for: 00:15
     from: '8'
     platform: state
     to: '0'
+  condition: []
   action:
   - data:
       entity_id: scene.kjeller_bod_av
