@@ -87,6 +87,12 @@ sun:
 weather:
   - platform: met
 
+netatmo:
+  api_key: !secret netatmo_api_key
+  secret_key: !secret netatmo_secret_key
+  username: !secret netatmo_username
+  password: !secret netatmo_password
+
 tts:
   - platform: google_translate
     service_name: google_say
