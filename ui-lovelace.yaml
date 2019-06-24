@@ -1,6 +1,7 @@
 title: Home
 views:
   - badges:
+      - sensor.netatmo_outdoor_temperature
       - sensor.netatmo_indoor_temperature
       - sensor.gang_temperature
       - sensor.kjeller_bod_temperature
