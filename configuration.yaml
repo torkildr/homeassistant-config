@@ -97,6 +97,9 @@ tts:
   - platform: google_translate
     service_name: google_say
 
+speedtestdotnet:
+  scan_interval: 02:00:00
+
 group: !include groups.yaml
 automation: !include automations.yaml
 scene: !include scene.yaml
