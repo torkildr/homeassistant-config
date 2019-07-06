@@ -98,7 +98,8 @@ tts:
     service_name: google_say
 
 speedtestdotnet:
-  scan_interval: 02:00:00
+  scan_interval: '02:00:00'
+  server_id: 13544
 
 group: !include groups.yaml
 automation: !include automations.yaml
