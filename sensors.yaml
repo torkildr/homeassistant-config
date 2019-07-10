@@ -1,0 +1,15 @@
+- platform: template
+  sensors:
+    netatmo_outdoor_battery_value:
+      friendly_name: "Netatmo Outdoor Battery"
+      value_template: >-
+        {{
+          {
+            "Full": 100,
+            "High": 80,
+            "Medium": 50,
+            "Low": 20,
+            "Very Low": 0,
+          }[states("sensor.netatmo_outdoor_battery")] | default("")
+        }}
+
