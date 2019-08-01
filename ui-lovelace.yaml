@@ -5,8 +5,6 @@ views:
       - sensor.netatmo_indoor_temperature
       - sensor.gang_temperature
       - sensor.kjeller_bod_temperature
-      - lock.hoveddor
-      - binary_sensor.garasjeport
     title: Home
     cards:
       - entities:
@@ -63,14 +61,15 @@ views:
                 - entity: binary_sensor.garasjeport
                 - entity: script.garasje_lukk
       - type: entities
-        title: Terrasse
-        entities:
-          - entity: switch.terrassevarmer
-          - entity: sensor.terrassevarmer_power
+        title: Hus
         show_header_toggle: false
-  - title: Strøm
-    cards:
-      - type: sensor
-        entity: sensor.electricity_price_home
-        graph: line
-        detail: 2
+        entities:
+          - lock.hoveddor
+          - sensor.real_time_consumption
+          - sensor.electricity_price_home
+      - type: entities
+        title: Ute
+        show_header_toggle: false
+        entities:
+          - switch.terrassevarmer
+          - sensor.terrassevarmer_power
