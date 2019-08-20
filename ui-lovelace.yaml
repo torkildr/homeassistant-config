@@ -1,4 +1,7 @@
 title: Villa GT
+resources:
+  - url: /local/atomic_calendar.js
+    type: module
 views:
 - title: Home
   badges:
@@ -67,6 +70,11 @@ views:
       entities:
         - switch.terrassevarmer
         - sensor.terrassevarmer_power
+    - type: "custom:atomic-calendar"
+      title: "Calendar"
+      entities:
+      - entity: calendar.gt
+        color: red
 - title: Media
   cards:
     - type: entities

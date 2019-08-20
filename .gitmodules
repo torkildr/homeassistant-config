@@ -1,0 +1,6 @@
+[submodule "atomic_calendar"]
+	path = atomic_calendar
+	url = https://github.com/atomic7777/atomic_calendar.git
+[submodule "custom_cards/atomic_calendar"]
+	path = custom_cards/atomic_calendar
+	url = https://github.com/atomic7777/atomic_calendar.git
