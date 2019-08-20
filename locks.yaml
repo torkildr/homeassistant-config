@@ -1,0 +1,9 @@
+- platform: template
+  name: Garasjeport
+  value_template: "{{ is_state('binary_sensor.garasjeport', 'off') }}"
+  lock:
+    service: script.garasje_lukk
+    data: {}
+  unlock:
+    service: script.garasje_apne
+    data: {}

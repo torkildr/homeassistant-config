@@ -75,8 +75,9 @@
     platform: event
   condition: []
   action:
-  - data: {}
-    service: script.hoveddor_apne
+  - data:
+      entity_id: lock.hoveddor
+    service: lock.unlock
 - id: '155821217700'
   alias: Kjeller Bod Enter
   trigger:
@@ -130,7 +131,9 @@
     platform: event
   condition: []
   action:
-  - service: script.hoveddor_apne
+  - data:
+      entity_id: lock.hoveddor
+    service: lock.unlock
 - id: '1556193117274'
   alias: Garasjeport Åpen
   trigger:

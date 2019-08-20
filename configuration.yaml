@@ -45,6 +45,8 @@ neato:
 verisure:
   username: !secret verisure_user
   password: !secret verisure_pass
+  default_lock_code: !secret verisure_pin
+  code_digits: 6
 
 emulated_hue:
   listen_port: 8300
@@ -112,4 +114,4 @@ plant: !include plants.yaml
 script: !include scripts.yaml
 #sensor: !include sensors.yaml
 binary_sensor: !include binary_sensor.yaml
-
+lock: !include locks.yaml

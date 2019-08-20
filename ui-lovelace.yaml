@@ -10,58 +10,35 @@ views:
       - sensor.gang_temperature
       - sensor.kjeller_bod_temperature
   cards:
-    - entities:
+    - type: entities
+      entities:
         - entity: switch.gang_oppe
         - entity: light.gang_nede
         - entity: switch.yttergang
       title: Gang
-      type: entities
-    - entities:
+    - type: entities
+      entities:
         - entity: light.stue_vegg
       title: Stue
-      type: entities
-    - entities:
+    - type: entities
+      entities:
         - entity: light.kjeller_tak
         - entity: light.kjeller_vegg
         - entity: switch.kjeller_bod
         - entity: switch.arbeidsbenk
       title: Kjeller
-      type: entities
-    - entities:
+    - type: entities
+      entities:
         - entity: switch.treningsrom_tak
         - entity: switch.treningsrom_spot
       title: Andre Etasje
-      type: entities
-    - type: vertical-stack
-      cards:
-        - type: conditional
-          conditions:
-            - entity: binary_sensor.garasjeport
-              state: 'off'
-          card:
-            type: entities
-            title: Garasjeport
-            show_header_toggle: false
-            entities:
-              - entity: binary_sensor.garasjeport
-              - entity: script.garasje_apne
-        - type: conditional
-          conditions:
-            - entity: binary_sensor.garasjeport
-              state: 'on'
-          card:
-            type: entities
-            title: Garasjeport
-            show_header_toggle: false
-            entities:
-              - entity: binary_sensor.garasjeport
-              - entity: script.garasje_lukk
     - type: entities
       title: Hus
       show_header_toggle: false
       entities:
         - lock.hoveddor
         - lock.boddor
+        - lock.garasjeport
         - sensor.real_time_consumption
         - sensor.electricity_price_home
     - type: entities
@@ -72,9 +49,12 @@ views:
         - sensor.terrassevarmer_power
     - type: "custom:atomic-calendar"
       title: "Calendar"
+      enableModeChange: true
+      defaultMode: 1
       entities:
       - entity: calendar.gt
         color: red
+        type: icon2
 - title: Media
   cards:
     - type: entities
