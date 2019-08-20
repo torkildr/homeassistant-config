@@ -9,6 +9,7 @@ views:
       - sensor.netatmo_indoor_temperature
       - sensor.gang_temperature
       - sensor.kjeller_bod_temperature
+      - sensor.real_time_consumption
   cards:
     - type: entities
       entities:
@@ -39,14 +40,10 @@ views:
         - lock.hoveddor
         - lock.boddor
         - lock.garasjeport
-        - sensor.real_time_consumption
-        - sensor.electricity_price_home
-    - type: entities
-      title: Ute
-      show_header_toggle: false
-      entities:
         - switch.terrassevarmer
-        - sensor.terrassevarmer_power
+- title: Calendar
+  panel: true
+  cards:
     - type: "custom:atomic-calendar"
       title: "Calendar"
       enableModeChange: true
