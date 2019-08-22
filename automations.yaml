@@ -35,8 +35,9 @@
     platform: event
   condition: []
   action:
-  - data: {}
-    service: script.garasje_apne
+  - data:
+      entity_id: lock.garasjeport
+    service: lock.unlock
 - id: '1550001835412'
   alias: 'The Button #1, 2 click'
   trigger:
@@ -48,8 +49,9 @@
     platform: event
   condition: []
   action:
-  - data: {}
-    service: script.garasje_lukk
+  - data:
+      entity_id: lock.garasjeport
+    service: lock.lock
 - id: '1550606425406'
   alias: Keyfob Car, Square Hold
   trigger:
@@ -62,8 +64,8 @@
   condition: []
   action:
   - data:
-      entity_id: switch.garasjeport
-    service: switch.turn_on
+      entity_id: lock.garasjeport
+    service: lock.unlock
 - id: '1551629601000'
   alias: Keyfob Car, Cross Hold
   trigger:
@@ -76,8 +78,8 @@
   condition: []
   action:
   - data:
-      entity_id: lock.hoveddor
-    service: lock.unlock
+      entity_id: lock.garasjeport
+    service: lock.lock
 - id: '155821217700'
   alias: Kjeller Bod Enter
   trigger:

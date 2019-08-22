@@ -4,12 +4,6 @@ resources:
     type: module
 views:
 - title: Home
-  badges:
-      - sensor.netatmo_outdoor_temperature
-      - sensor.netatmo_indoor_temperature
-      - sensor.gang_temperature
-      - sensor.kjeller_bod_temperature
-      - sensor.real_time_consumption
   cards:
     - type: entities
       entities:
@@ -41,6 +35,13 @@ views:
         - lock.boddor
         - lock.garasjeport
         - switch.terrassevarmer
+    - type: glance
+      entities:
+      - sensor.netatmo_outdoor_temperature
+      - sensor.netatmo_indoor_temperature
+      - sensor.gang_temperature
+      - sensor.kjeller_bod_temperature
+      - sensor.real_time_consumption
 - title: Calendar
   panel: true
   cards:
