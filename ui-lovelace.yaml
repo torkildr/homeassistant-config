@@ -5,6 +5,13 @@ resources:
 views:
 - title: Home
   cards:
+    - type: glance
+      entities:
+        - sensor.netatmo_outdoor_temperature
+        - sensor.netatmo_indoor_temperature
+        - sensor.gang_temperature
+        - sensor.kjeller_bod_temperature
+        - sensor.real_time_consumption
     - type: entities
       entities:
         - entity: switch.gang_oppe
@@ -35,13 +42,6 @@ views:
         - lock.boddor
         - lock.garasjeport
         - switch.terrassevarmer
-    - type: glance
-      entities:
-      - sensor.netatmo_outdoor_temperature
-      - sensor.netatmo_indoor_temperature
-      - sensor.gang_temperature
-      - sensor.kjeller_bod_temperature
-      - sensor.real_time_consumption
 - title: Calendar
   panel: true
   cards:
