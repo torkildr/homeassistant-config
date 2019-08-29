@@ -86,9 +86,6 @@ logbook:
 
 sun:
 
-weather:
-  - platform: met
-
 netatmo:
   api_key: !secret netatmo_api_key
   secret_key: !secret netatmo_secret_key
