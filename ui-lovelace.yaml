@@ -19,9 +19,9 @@ views:
         - entity: switch.yttergang
       title: Gang
     - type: entities
+      title: Første Etasje
       entities:
-        - entity: light.stue_vegg
-      title: Stue
+        - entity: light.nuppelampa
     - type: entities
       entities:
         - entity: light.kjeller_tak
