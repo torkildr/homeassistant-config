@@ -38,9 +38,10 @@ views:
       title: Hus
       show_header_toggle: false
       entities:
+        - lock.garasjeport
+        - switch.garasjelys
         - lock.hoveddor
         - lock.boddor
-        - lock.garasjeport
         - switch.terrassevarmer
 - title: Calendar
   panel: true

@@ -149,3 +149,25 @@
       message: Garasjeport har vært lenge åpen. Kanskje vurdere å lukke?
       title: Garasjeport åpen
     service: notify.web
+- id: '1569079029593'
+  alias: Garasjelys På
+  trigger:
+  - entity_id: binary_sensor.garasjeport
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - data:
+      entity_id: switch.garasjelys
+    service: switch.turn_on
+- id: '1569079029594'
+  alias: Garasjelys Av
+  trigger:
+  - entity_id: binary_sensor.garasjeport
+    platform: state
+    to: 'off'
+  condition: []
+  action:
+  - data:
+      entity_id: switch.garasjelys
+    service: switch.turn_off

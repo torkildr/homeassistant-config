@@ -23,6 +23,8 @@ switch.kjeller_bod:
   icon: mdi:lightbulb
 switch.arbeidsbenk:
   icon: mdi:lightbulb
+switch.garasjelys:
+  icon: mdi:lightbulb
 switch.treningsrom_tak:
   icon: mdi:lightbulb
 switch.treningsrom_spot:
