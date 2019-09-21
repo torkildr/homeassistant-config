@@ -53,7 +53,7 @@
       entity_id: lock.garasjeport
     service: lock.lock
 - id: '1550606425406'
-  alias: Keyfob Car, Square Hold
+  alias: Keyfob Car, Square
   trigger:
   - event_data:
       entity_id: zwave.fibaro_keyfob_carkey
@@ -64,10 +64,10 @@
   condition: []
   action:
   - data:
-      entity_id: lock.garasjeport
-    service: lock.unlock
+      entity_id: switch.garasjeport
+    service: switch.turn_on
 - id: '1551629601000'
-  alias: Keyfob Car, Cross Hold
+  alias: Keyfob Car, Cross
   trigger:
   - event_data:
       entity_id: zwave.fibaro_keyfob_carkey
@@ -78,8 +78,8 @@
   condition: []
   action:
   - data:
-      entity_id: lock.garasjeport
-    service: lock.lock
+      entity_id: lock.hoveddor
+    service: lock.unlock
 - id: '155821217700'
   alias: Kjeller Bod Enter
   trigger:
@@ -137,7 +137,7 @@
       entity_id: lock.hoveddor
     service: lock.unlock
 - id: '1556193117274'
-  alias: Garasjeport Åpen
+  alias: Garasjeport Lenge Åpen
   trigger:
   - entity_id: binary_sensor.garasjeport
     for: 01:00:00
