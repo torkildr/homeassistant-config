@@ -3,7 +3,7 @@ resources:
   - url: /local/atomic_calendar.js
     type: module
 views:
-- title: Home
+- title: Hjem
   cards:
     - type: glance
       entities:
@@ -21,6 +21,8 @@ views:
     - type: entities
       title: Første Etasje
       entities:
+        - entity: light.stue_spot
+        - entity: light.kontor_spot
         - entity: light.nuppelampa
     - type: entities
       entities:
@@ -43,7 +45,13 @@ views:
         - lock.hoveddor
         - lock.boddor
         - switch.terrassevarmer
-- title: Calendar
+- title: Varme
+  cards:
+    - type: thermostat
+      entity: climate.stue
+    - type: thermostat
+      entity: climate.kontor
+- title: Kalender
   panel: true
   cards:
     - type: "custom:atomic-calendar"

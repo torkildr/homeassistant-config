@@ -16,3 +16,18 @@ switch.yttergang_2:
 sensor.kjeller_tak_power_2:
   ignored: true
   polling_intensity: 0
+climate.thermofloor_as_heatit_thermostat_tf_021_cooling:
+  ignored: true
+  polling_intensity: 0
+light.spisestua_level_3:
+  ignored: true
+  polling_intensity: 0
+light.spisestua_level_4:
+  ignored: true
+  polling_intensity: 0
+sensor.spisestua_unknown:
+  ignored: true
+  polling_intensity: 0
+climate.thermofloor_as_heatit_thermostat_tf_021_cooling_2:
+  ignored: true
+  polling_intensity: 0
