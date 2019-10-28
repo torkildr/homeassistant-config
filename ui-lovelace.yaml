@@ -22,6 +22,7 @@ views:
       title: Første Etasje
       entities:
         - entity: light.stue_spot
+        - entity: light.stuelampe
         - entity: light.kontor_spot
         - entity: light.nuppelampa
     - type: entities

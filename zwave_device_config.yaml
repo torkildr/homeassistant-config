@@ -31,3 +31,6 @@ sensor.spisestua_unknown:
 climate.thermofloor_as_heatit_thermostat_tf_021_cooling_2:
   ignored: true
   polling_intensity: 0
+light.fibaro_system_fgd212_dimmer_2_level_3:
+  ignored: true
+  polling_intensity: 0
