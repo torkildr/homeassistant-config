@@ -7,11 +7,11 @@ views:
   cards:
     - type: glance
       entities:
-        - sensor.netatmo_outdoor_temperature
-        - sensor.netatmo_indoor_temperature
-        - sensor.gang_temperature
-        - sensor.kjeller_bod_temperature
-        - sensor.real_time_consumption
+        - entity: sensor.netatmo_outdoor_temperature
+        - entity: sensor.netatmo_indoor_temperature
+        - entity: sensor.gang_temperature
+        - entity: sensor.kjeller_bod_temperature
+        - entity: sensor.real_time_consumption
     - type: entities
       entities:
         - entity: switch.gang_oppe
@@ -74,3 +74,5 @@ views:
       show_header_toggle: false
     - type: media-control
       entity: media_player.sound_bar
+    - type: media-control
+      entity: media_player.samsung_tv_remote

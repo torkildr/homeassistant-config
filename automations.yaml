@@ -172,3 +172,35 @@
   - data:
       entity_id: switch.garasjelys
     service: switch.turn_off
+- id: '1572437961272'
+  alias: Lav varme på natta
+  description: ''
+  trigger:
+  - at: '22:00'
+    platform: time
+  condition: []
+  action:
+  - service: script.lav_varme
+- id: '1572438496325'
+  alias: Høy varme på morgenen
+  description: ''
+  trigger:
+  - at: 05:00
+    platform: time
+  condition: []
+  action:
+  - service: script.hoy_varme
+- id: '1572438649325'
+  alias: Høy varme når i gangen
+  description: ''
+  trigger:
+  - entity_id: sensor.gang_motion
+    from: '0'
+    platform: state
+    to: '8'
+  condition:
+  - after: '14:00'
+    before: '22:00'
+    condition: time
+  action:
+  - service: script.hoy_varme

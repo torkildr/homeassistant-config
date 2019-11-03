@@ -16,3 +16,25 @@ garasje_lukk:
   - data:
       entity_id: switch.garasjeport
     service: switch.turn_on
+lav_varme:
+  alias: Lav Varme
+  sequence:
+  - data:
+      entity_id: climate.kontor
+      temperature: 18
+    service: climate.set_temperature
+  - data:
+      entity_id: climate.stue
+      temperature: 18
+    service: climate.set_temperature
+hoy_varme:
+  alias: Høy Varme
+  sequence:
+  - data:
+      entity_id: climate.kontor
+      temperature: 22
+    service: climate.set_temperature
+  - data:
+      entity_id: climate.stue
+      temperature: 21.5
+    service: climate.set_temperature
