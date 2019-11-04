@@ -208,5 +208,8 @@
   - condition: state
     entity_id: group.all_persons
     state: home
+  - condition: state
+    entity_id: binary_sensor.workday_sensor
+    state: 'off'
   action:
   - service: script.hoy_varme
