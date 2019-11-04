@@ -1,4 +1,5 @@
 - platform: ping
   name: Internett
   host: 1.1.1.1
-
+- platform: workday
+  country: "NO"

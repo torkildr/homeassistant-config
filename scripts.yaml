@@ -32,9 +32,12 @@ hoy_varme:
   sequence:
   - data:
       entity_id: climate.kontor
-      temperature: 22
+      temperature: 22.5
     service: climate.set_temperature
   - data:
       entity_id: climate.stue
-      temperature: 21.5
+      temperature: 22.5
     service: climate.set_temperature
+  - below: '18'
+    condition: numeric_state
+    entity_id: sensor.netatmo_outdoor_max_temp

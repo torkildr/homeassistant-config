@@ -48,6 +48,10 @@ views:
         - switch.terrassevarmer
 - title: Varme
   cards:
+    - type: entities
+      entities:
+        - script.hoy_varme
+        - script.lav_varme
     - type: thermostat
       entity: climate.stue
     - type: thermostat

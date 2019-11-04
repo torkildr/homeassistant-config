@@ -62,6 +62,7 @@ notify:
 media_player:
   - platform: samsungtv
     host: !secret samsungtv_ip
+    mac: !secret samsungtv_mac
     port: 8001
 
 tibber:
