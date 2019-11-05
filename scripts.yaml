@@ -38,6 +38,6 @@ hoy_varme:
       entity_id: climate.stue
       temperature: 22.5
     service: climate.set_temperature
-  - below: '18'
+  - below: '15'
     condition: numeric_state
-    entity_id: sensor.netatmo_outdoor_max_temp
+    entity_id: sensor.netatmo_outdoor_min_temp
