@@ -90,9 +90,8 @@
   - condition: state
     entity_id: switch.yttergang
     state: 'off'
-  - condition: state
-    entity_id: group.all_persons
-    state: not_home
+  - before: '23:00'
+    condition: time
   action:
   - data:
       entity_id: scene.gang_pa
