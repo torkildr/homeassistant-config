@@ -152,6 +152,7 @@
   - at: '22:00'
     platform: time
   - entity_id: group.all_persons
+    for: 00:30
     from: home
     platform: state
     to: not_home
