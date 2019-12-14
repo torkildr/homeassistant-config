@@ -3,3 +3,19 @@
     - 'time'
     - 'date'
     - 'date_time'
+- platform: miflora
+  name: 'flower1_spathiphyllum'
+  mac: 'C4:7C:8D:66:2D:BC'
+  force_update: true
+- platform: miflora
+  name: 'flower2_palme'
+  mac: 'C4:7C:8D:66:29:3E'
+  force_update: true
+- platform: miflora
+  name: 'flower3_monstera'
+  mac: 'C4:7C:8D:66:2C:14'
+  force_update: true
+- platform: miflora
+  name: 'flower4_ginseng'
+  mac: 'C4:7C:8D:66:25:C9'
+  force_update: true
