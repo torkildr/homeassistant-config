@@ -9,8 +9,8 @@ views:
       entities:
         - entity: sensor.netatmo_outdoor_temperature
         - entity: sensor.netatmo_indoor_temperature
-        - entity: sensor.gang_temperature
-        - entity: sensor.kjeller_bod_temperature
+        - entity: sensor.netatmo_rain_sum_1
+        - entity: sensor.netatmo_wind_strength
         - entity: sensor.real_time_consumption
     - type: entities
       entities:
