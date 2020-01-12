@@ -103,7 +103,7 @@ google:
 
 speedtestdotnet:
   scan_interval: '02:00:00'
-  server_id: 13544
+  server_id: 11787
 
 group: !include groups.yaml
 automation: !include automations.yaml

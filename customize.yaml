@@ -29,3 +29,7 @@ switch.treningsrom_tak:
   icon: mdi:lightbulb
 switch.treningsrom_spot:
   icon: mdi:lightbulb
+sensor.wind_strength_mps:
+  friendly_name: Vind
+  icon: mdi:weather-windy
+  unit_of_measurement: m/s

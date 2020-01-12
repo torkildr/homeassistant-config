@@ -6,7 +6,8 @@
 - platform: template
   sensors:
     wind_strength_mps:
-      value_template: "{{ states('sensor.netatmo_wind_strength') | float / 3.6 }}"
+      value_template: "{{ (states('sensor.netatmo_wind_strength') | float / 3.6) | round(1) }}"
+      unit_of_measurement: "m/s"
 - platform: miflora
   name: 'flower1_spathiphyllum'
   mac: 'C4:7C:8D:66:2D:BC'
