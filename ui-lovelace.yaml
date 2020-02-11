@@ -52,6 +52,7 @@ views:
       entities:
         - script.hoy_varme
         - script.lav_varme
+        - cover.kontor
     - type: thermostat
       entity: climate.stue
     - type: thermostat
