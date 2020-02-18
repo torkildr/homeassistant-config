@@ -79,5 +79,3 @@ views:
       show_header_toggle: false
     - type: media-control
       entity: media_player.sound_bar
-    - type: media-control
-      entity: media_player.samsung_tv_remote
