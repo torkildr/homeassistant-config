@@ -98,6 +98,11 @@ google:
 speedtestdotnet:
   scan_interval: '02:00:00'
 
+climate:
+  - platform: mill
+    username: !secret mill_username
+    password: !secret mill_password
+
 group: !include groups.yaml
 automation: !include automations.yaml
 scene: !include scene.yaml
