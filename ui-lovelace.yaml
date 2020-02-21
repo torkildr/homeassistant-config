@@ -53,10 +53,20 @@ views:
         - script.hoy_varme
         - script.lav_varme
         - cover.kontor
-    - type: thermostat
-      entity: climate.stue
-    - type: thermostat
-      entity: climate.kontor
+    - type: horizontal-stack
+      title: Første etasje
+      cards:
+        - type: thermostat
+          entity: climate.stue
+        - type: thermostat
+          entity: climate.kontor
+    - type: horizontal-stack
+      title: Andre etasje
+      cards:
+        - type: thermostat
+          entity: climate.treningsrom
+        - type: thermostat
+          entity: climate.barnerom
 - title: Kalender
   panel: true
   cards:
