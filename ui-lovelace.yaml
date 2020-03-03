@@ -36,6 +36,7 @@ views:
       entities:
         - entity: switch.treningsrom_tak
         - entity: switch.treningsrom_spot
+        - entity: light.soverom_seng
       title: Andre Etasje
     - type: entities
       title: Hus
