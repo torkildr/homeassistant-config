@@ -34,9 +34,9 @@ views:
       title: Kjeller
     - type: entities
       entities:
+        - entity: light.soverom_seng
         - entity: switch.treningsrom_tak
         - entity: switch.treningsrom_spot
-        - entity: light.soverom_seng
       title: Andre Etasje
     - type: entities
       title: Hus
