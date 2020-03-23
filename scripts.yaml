@@ -36,7 +36,7 @@ hoy_varme:
     service: climate.set_temperature
   - data:
       entity_id: climate.stue
-      temperature: 22.5
+      temperature: 23.5
     service: climate.set_temperature
   - below: '15'
     condition: numeric_state
