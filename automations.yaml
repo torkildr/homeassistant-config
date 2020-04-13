@@ -204,3 +204,19 @@
   action:
   - data: {}
     service: script.hoy_varme
+- id: '1586514634514'
+  alias: Lås dører når ingen hjemme
+  description: ''
+  trigger:
+  - entity_id: group.all_persons
+    from: home
+    platform: state
+    to: not_home
+  condition: []
+  action:
+  - data: {}
+    entity_id: lock.hoveddor
+    service: lock.lock
+  - data: {}
+    entity_id: lock.boddor
+    service: lock.lock
