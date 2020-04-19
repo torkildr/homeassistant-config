@@ -47,27 +47,23 @@ views:
         - lock.hoveddor
         - lock.boddor
         - switch.terrassevarmer
-- title: Varme
+- title: Klima
   cards:
     - type: entities
+      title: Vindu
+      entities:
+        - cover.stue
+        - cover.kjokken
+        - cover.kontor
+    - type: entities
+      title: Varme
       entities:
         - script.hoy_varme
         - script.lav_varme
-        - cover.kontor
-    - type: horizontal-stack
-      title: Første etasje
-      cards:
-        - type: thermostat
-          entity: climate.stue
-        - type: thermostat
-          entity: climate.kontor
-    - type: horizontal-stack
-      title: Andre etasje
-      cards:
-        - type: thermostat
-          entity: climate.treningsrom
-        - type: thermostat
-          entity: climate.barnerom
+        - climate.stue
+        - climate.kontor
+        - climate.treningsrom
+        - climate.barnerom
 - title: Kalender
   panel: true
   cards:
