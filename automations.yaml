@@ -220,3 +220,33 @@
   - data: {}
     entity_id: lock.boddor
     service: lock.lock
+- id: '1587456032987'
+  alias: Garderobelys Svakt
+  description: ''
+  trigger:
+  - entity_id: light.soverom_seng
+    platform: state
+    to: 'off'
+  condition: []
+  action:
+  - data:
+      brightness: 12
+    entity_id:
+    - light.garderobe_stine
+    - light.garderobe_torkild
+    service: light.turn_on
+- id: '1587456195101'
+  alias: Garderobelys Kraftig
+  description: ''
+  trigger:
+  - entity_id: light.soverom_seng
+    from: 'off'
+    platform: state
+  condition: []
+  action:
+  - data:
+      brightness: 255
+    entity_id:
+      - light.garderobe_stine
+      - light.garderobe_torkild
+    service: light.turn_on
