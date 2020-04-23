@@ -121,6 +121,10 @@
   condition: []
   action:
   - data:
+      data:
+        actions:
+        - action: garagedoor_close
+          title: Lukk port
       message: Garasjeport har vært lenge åpen. Kanskje vurdere å lukke?
       title: Garasjeport åpen
     service: notify.web
@@ -231,6 +235,7 @@
   action:
   - data:
       brightness: 12
+      transition: 3
     entity_id:
     - light.garderobe_stine
     - light.garderobe_torkild
@@ -246,7 +251,21 @@
   action:
   - data:
       brightness: 255
+      transition: 3
     entity_id:
-      - light.garderobe_stine
-      - light.garderobe_torkild
+    - light.garderobe_stine
+    - light.garderobe_torkild
     service: light.turn_on
+- id: '1587627091453'
+  alias: Garasjeport, Lukket fra App
+  description: ''
+  trigger:
+  - event_data:
+      action: garagedoor_close
+    event_type: html5_notification.clicked
+    platform: event
+  condition: []
+  action:
+  - data: {}
+    entity_id: script.garasje_lukk
+    service: script.turn_on
