@@ -105,7 +105,7 @@ climate:
 
 group: !include groups.yaml
 automation: !include automations.yaml
-scene: !include scene.yaml
+scene: !include scenes.yaml
 plant: !include plants.yaml
 script: !include scripts.yaml
 sensor: !include sensors.yaml
