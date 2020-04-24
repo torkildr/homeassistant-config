@@ -112,7 +112,7 @@
       entity_id: lock.hoveddor
     service: lock.unlock
 - id: '1556193117274'
-  alias: Garasjeport Lenge Åpen
+  alias: Garasjeport, Lenge Åpen
   trigger:
   - entity_id: binary_sensor.garasjeport
     for: 01:00:00
@@ -125,6 +125,7 @@
         actions:
         - action: garagedoor_close
           title: Lukk port
+        tag: garagedoor_close
       message: Garasjeport har vært lenge åpen. Kanskje vurdere å lukke?
       title: Garasjeport åpen
     service: notify.web
@@ -269,3 +270,16 @@
   - data: {}
     entity_id: script.garasje_lukk
     service: script.turn_on
+- id: '1587709144623'
+  alias: Garasjeport, Lukket
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.garasjeport
+    platform: state
+    to: 'off'
+  condition: []
+  action:
+  - data:
+      data:
+        tag: garagedoor_close
+    service: html5.dismiss
