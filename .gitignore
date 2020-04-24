@@ -16,3 +16,4 @@ deps
 .cloud
 google_calendars.yaml
 .google.token
+node-red
