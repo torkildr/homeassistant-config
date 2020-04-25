@@ -11,22 +11,8 @@
   condition: []
   action:
   - data:
-      entity_id: switch.garasjeport
-    service: switch.turn_on
-- id: '1550001835412'
-  alias: 'The Button #1, 2 click'
-  trigger:
-  - event_data:
-      entity_id: zwave.fibaro_button_1
-      scene_data: 7860
-      scene_id: 1
-    event_type: zwave.scene_activated
-    platform: event
-  condition: []
-  action:
-  - data:
-      entity_id: lock.garasjeport
-    service: lock.lock
+      desired_state: toggle
+    service: script.garasjeport
 - id: '1550606425406'
   alias: Keyfob Car, Square
   trigger:
@@ -39,8 +25,8 @@
   condition: []
   action:
   - data:
-      entity_id: switch.garasjeport
-    service: switch.turn_on
+      desired_state: toggle
+    service: script.garasjeport
 - id: '1551629601000'
   alias: Keyfob Car, Cross
   trigger:
@@ -129,28 +115,6 @@
       message: Garasjeport har vært lenge åpen. Kanskje vurdere å lukke?
       title: Garasjeport åpen
     service: notify.web
-- id: '1569079029593'
-  alias: Garasjelys På
-  trigger:
-  - entity_id: binary_sensor.garasjeport
-    platform: state
-    to: 'on'
-  condition: []
-  action:
-  - data:
-      entity_id: switch.garasjelys
-    service: switch.turn_on
-- id: '1569079029594'
-  alias: Garasjelys Av
-  trigger:
-  - entity_id: binary_sensor.garasjeport
-    platform: state
-    to: 'off'
-  condition: []
-  action:
-  - data:
-      entity_id: switch.garasjelys
-    service: switch.turn_off
 - id: '1572437961272'
   alias: Varme, Lav når borte eller kveld
   description: ''
@@ -268,18 +232,5 @@
   condition: []
   action:
   - data: {}
-    entity_id: script.garasje_lukk
-    service: script.turn_on
-- id: '1587709144623'
-  alias: Garasjeport, Lukket
-  description: ''
-  trigger:
-  - entity_id: binary_sensor.garasjeport
-    platform: state
-    to: 'off'
-  condition: []
-  action:
-  - data:
-      data:
-        tag: garagedoor_close
-    service: html5.dismiss
+    entity_id: lock.garasjeport
+    service: lock.lock

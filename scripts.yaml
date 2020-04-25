@@ -1,21 +1,3 @@
-garasje_apne:
-  alias: Åpne Garasjeport
-  sequence:
-  - condition: state
-    entity_id: binary_sensor.garasjeport
-    state: 'off'
-  - data:
-      entity_id: switch.garasjeport
-    service: switch.turn_on
-garasje_lukk:
-  alias: Lukke Garasjeport
-  sequence:
-  - condition: state
-    entity_id: binary_sensor.garasjeport
-    state: 'on'
-  - data:
-      entity_id: switch.garasjeport
-    service: switch.turn_on
 lav_varme:
   alias: Lav Varme
   sequence:
@@ -41,3 +23,6 @@ hoy_varme:
   - below: '15'
     condition: numeric_state
     entity_id: sensor.netatmo_outdoor_min_temp
+garasjeport:
+  alias: Garasjeport
+  sequence: []
