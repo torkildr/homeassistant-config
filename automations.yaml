@@ -97,24 +97,6 @@
   - data:
       entity_id: lock.hoveddor
     service: lock.unlock
-- id: '1556193117274'
-  alias: Garasjeport, Lenge Åpen
-  trigger:
-  - entity_id: binary_sensor.garasjeport
-    for: 01:00:00
-    platform: state
-    to: 'on'
-  condition: []
-  action:
-  - data:
-      data:
-        actions:
-        - action: garagedoor_close
-          title: Lukk port
-        tag: garagedoor_close
-      message: Garasjeport har vært lenge åpen. Kanskje vurdere å lukke?
-      title: Garasjeport åpen
-    service: notify.web
 - id: '1572437961272'
   alias: Varme, Lav når borte eller kveld
   description: ''
@@ -221,16 +203,3 @@
     - light.garderobe_stine
     - light.garderobe_torkild
     service: light.turn_on
-- id: '1587627091453'
-  alias: Garasjeport, Lukket fra App
-  description: ''
-  trigger:
-  - event_data:
-      action: garagedoor_close
-    event_type: html5_notification.clicked
-    platform: event
-  condition: []
-  action:
-  - data: {}
-    entity_id: lock.garasjeport
-    service: lock.lock
