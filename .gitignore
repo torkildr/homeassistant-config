@@ -17,3 +17,5 @@ deps
 google_calendars.yaml
 .google.token
 node-red
+home-assistant_v2.db-shm
+home-assistant_v2.db-wal
