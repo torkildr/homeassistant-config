@@ -197,7 +197,7 @@
   condition: []
   action:
   - data:
-      brightness: 255
+      brightness: 204
       transition: 3
     entity_id:
     - light.garderobe_stine

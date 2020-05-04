@@ -17,9 +17,6 @@ default_config:
 
 frontend:
 
-lovelace:
-  mode: yaml
-
 system_health:
 
 mqtt:
@@ -29,7 +26,6 @@ mqtt:
 influxdb:
 
 recorder:
-  purge_interval: 1
   purge_keep_days: 7
 
 zwave:
