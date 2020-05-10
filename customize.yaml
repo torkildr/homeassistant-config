@@ -13,6 +13,8 @@ sensor.terrassevarmer_power:
   device_class: power
 switch.terrassevarmer:
   icon: mdi:radiator
+switch.gang_trapp:
+  icon: mdi:lightbulb
 switch.yttergang:
   icon: mdi:lightbulb
 switch.kjeller_bod:
