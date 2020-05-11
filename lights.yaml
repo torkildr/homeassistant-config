@@ -1,0 +1,27 @@
+- platform: switch
+  name: Gang Oppe
+  entity_id: switch.gang_oppe
+- platform: switch
+  name: Gang Trapp
+  entity_id: switch.gang_trapp
+- platform: switch
+  name: Yttergang
+  entity_id: switch.yttergang
+- platform: switch
+  name: Treningsrom Tak
+  entity_id: switch.treningsrom_tak
+- platform: switch
+  name: Treningsrom Spot
+  entity_id: switch.treningsrom_spot
+- platform: switch
+  name: Barnerom
+  entity_id: switch.barnerom
+- platform: switch
+  name: Kjellerbod
+  entity_id: switch.kjeller_bod
+- platform: switch
+  name: Arbeidsbenk
+  entity_id: switch.arbeidsbenk
+- platform: switch
+  name: Garasjelys
+  entity_id: switch.garasjelys
