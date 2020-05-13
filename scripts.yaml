@@ -14,11 +14,11 @@ hoy_varme:
   sequence:
   - data:
       entity_id: climate.kontor
-      temperature: 24
+      temperature: 23
     service: climate.set_temperature
   - data:
       entity_id: climate.stue
-      temperature: 24
+      temperature: 23
     service: climate.set_temperature
   - below: '15'
     condition: numeric_state
