@@ -1,32 +1,47 @@
+- name: Alt på
+  entities:
+    light.gang_oppe: true
+    light.gang_nede: true
+    light.gang_trapp: true
+    light.yttergang: true
+    light.kjeller_tak: true
+    light.kjeller_vegg: true
+    light.nuppelampa: true
+    light.kontor_spot: true
+    light.stuelampe: true
+    light.stue_spot: true
+
 - name: Alt av
   entities:
-    switch.gang_oppe: false
+    light.gang_oppe: false
     light.gang_nede: false
-    switch.yttergang: false
-    light.stue_vegg: false
-    switch.stue_vindu: false
-    switch.vitrineskapet: false
+    light.gang_trapp: false
+    light.yttergang: false
     light.kjeller_tak: false
     light.kjeller_vegg: false
-    switch.kjeller_bod: false
-    switch.treningsrom_tak: false
-    switch.treningsrom_spot: false
+    light.treningsrom_tak: false
+    light.treningsrom_spot: false
+    light.nuppelampa: false
+    light.kontor_spot: false
+    light.stuelampe: false
+    light.stue_spot: false
 
 - name: Gang På
   entities:
-    switch.gang_oppe: true
+    light.gang_trapp: true
+    light.gang_oppe: true
+    light.yttergang: true
     light.gang_nede:
       state: true
       brightness: 178
-    switch.yttergang: true
 
 - name: Kjeller Bod På
   entities:
-    switch.kjeller_bod: true
-    switch.arbeidsbenk: true
+    light.kjeller_bod: true
+    light.arbeidsbenk: true
 
 - name: Kjeller Bod Av
   entities:
-    switch.kjeller_bod: false
-    switch.arbeidsbenk: false
+    light.kjeller_bod: false
+    light.arbeidsbenk: false
 

@@ -10,3 +10,7 @@ sensor.wind_strength_mps:
   friendly_name: Vind
   icon: mdi:weather-windy
   unit_of_measurement: m/s
+scene.alt_av:
+  icon: mdi:lightbulb-off-outline
+scene.alt_pa:
+  icon: mdi:lightbulb-on-outline
