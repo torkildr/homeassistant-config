@@ -8,7 +8,7 @@
       value_template: "{{ (states('sensor.netatmo_wind_strength') | float / 3.6) | round(1) }}"
       unit_of_measurement: "m/s"
     date_short:
-      value_template: "{{ strptime(states('sensor.date'), '%Y-%m-%d').strftime('%-d %b') }}"
+      value_template: "{{ strptime(states('sensor.date'), '%Y-%m-%d').strftime('%a %-d') }}"
 - platform: miflora
   name: 'flower1_spathiphyllum'
   mac: 'C4:7C:8D:66:2D:BC'
