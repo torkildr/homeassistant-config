@@ -23,6 +23,7 @@
     light.treningsrom_spot: false
     light.nuppelampa: false
     light.kontor_spot: false
+    light.soverom_seng: false
     light.stuelampe: false
     light.stue_spot: false
 

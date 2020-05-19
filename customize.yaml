@@ -14,3 +14,11 @@ scene.alt_av:
   icon: mdi:lightbulb-off-outline
 scene.alt_pa:
   icon: mdi:lightbulb-on-outline
+cover.kjokken:
+  device_class: blind
+cover.kontor:
+  device_class: blind
+cover.stue:
+  device_class: blind
+script.alt_av:
+  icon: mdi:lightbulb-off-outline

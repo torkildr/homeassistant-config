@@ -26,3 +26,12 @@ hoy_varme:
 garasjeport:
   alias: Garasjeport
   sequence: []
+alt_av:
+  alias: Alt Av
+  sequence:
+  - data: {}
+    entity_id: scene.alt_av
+    service: scene.turn_on
+  - data: {}
+    entity_id: media_player.kitchen,media_player.office,media_player.bedroom,media_player.livingroom
+    service: media_player.media_stop
