@@ -38,11 +38,11 @@
 
 - name: Kjeller Bod På
   entities:
-    light.kjeller_bod: true
+    light.kjellerbod: true
     light.arbeidsbenk: true
 
 - name: Kjeller Bod Av
   entities:
-    light.kjeller_bod: false
+    light.kjellerbod: false
     light.arbeidsbenk: false
 
