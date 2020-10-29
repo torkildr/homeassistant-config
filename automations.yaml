@@ -203,3 +203,27 @@
     - light.garderobe_stine
     - light.garderobe_torkild
     service: light.turn_on
+- id: '1600448609147'
+  alias: Tag Garasje is scanned
+  description: ''
+  trigger:
+  - platform: tag
+    tag_id: a395a962-779d-4201-b889-8e33c4ea2402
+  condition: []
+  action:
+  - service: script.garasjeport
+    data:
+      desired_state: toggle
+  mode: single
+- id: '1600502553956'
+  alias: Tag Hoveddør is scanned
+  description: ''
+  trigger:
+  - platform: tag
+    tag_id: 749bf980-aed0-476c-8156-ae3e53dbb8aa
+  condition: []
+  action:
+  - service: lock.unlock
+    data: {}
+    entity_id: lock.hoveddor
+  mode: single
