@@ -18,11 +18,12 @@ hoy_varme:
     service: climate.set_temperature
   - data:
       entity_id: climate.stue
-      temperature: 23
+      temperature: 23.5
     service: climate.set_temperature
   - below: '15'
     condition: numeric_state
     entity_id: sensor.netatmo_outdoor_min_temp
+  mode: single
 garasjeport:
   alias: Garasjeport
   sequence: []
