@@ -18,26 +18,19 @@
   mac: 'C4:7C:8D:66:29:3E'
   force_update: true
 - platform: miflora
-  name: 'flower3_monstera'
-  mac: 'C4:7C:8D:66:2C:14'
-  force_update: true
-- platform: miflora
   name: 'flower4_ginseng'
   mac: 'C4:7C:8D:66:25:C9'
-  force_update: true
-- platform: miflora
-  name: 'flower5_mynte'
-  mac: '80:EA:CA:88:D7:D9'
   force_update: true
 - platform: miflora
   name: 'flower6_drageblod_trapp'
   mac: '80:EA:CA:88:D8:D0'
   force_update: true
 - platform: miflora
-  name: 'flower7_drageblod_kjokken'
+  name: 'flower7_drageblod_kjeller'
   mac: '80:EA:CA:88:D7:61'
   force_update: true
 - platform: miflora
   name: 'flower8_kontor'
   mac: '80:EA:CA:88:D8:0D'
   force_update: true
+
