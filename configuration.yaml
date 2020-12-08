@@ -90,10 +90,11 @@ octoprint:
   bed: true
   number_of_tools: 1
 
-platform: mjpeg
-  name: OctoPrint
-  still_image_url: !secret octoprint_snapshot
-  mjpeg_url: !secret octoprint_stream
+camera:
+  - platform: mjpeg
+    name: OctoPrint
+    still_image_url: !secret octoprint_snapshot
+    mjpeg_url: !secret octoprint_stream
 
 group: !include groups.yaml
 automation: !include automations.yaml
