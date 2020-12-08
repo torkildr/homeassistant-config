@@ -52,15 +52,8 @@ notify:
     vapid_pub_key: !secret vapid_pub_key
     vapid_prv_key: !secret vapid_prv_key
 
-media_player:
-  - platform: samsungtv
-    host: !secret samsungtv_ip
-    mac: !secret samsungtv_mac
-    port: 8001
-
 tibber:
   access_token: !secret tibber_token
-
 
 config:
 
@@ -70,7 +63,7 @@ http:
 
 updater:
 
-  discovery:
+discovery:
 
 conversation:
 
@@ -90,6 +83,12 @@ google:
 
 speedtestdotnet:
   scan_interval: '02:00:00'
+
+octoprint:
+  host: !secret octoprint_host
+  api_key: !secret octoprint_key
+  bed: true
+  number_of_tools: 1
 
 group: !include groups.yaml
 automation: !include automations.yaml

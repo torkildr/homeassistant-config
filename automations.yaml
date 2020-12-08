@@ -60,11 +60,15 @@
     from: '8'
     platform: state
     to: '0'
-  condition: []
+  condition:
+  - condition: state
+    entity_id: binary_sensor.octoprint_printing
+    state: 'off'
   action:
   - data:
       entity_id: scene.kjeller_bod_av
     service: scene.turn_on
+  mode: single
 - id: '1551651260765'
   alias: Motion Gang
   trigger:
@@ -227,4 +231,17 @@
   - service: lock.unlock
     data: {}
     entity_id: lock.hoveddor
+  mode: single
+- id: '1607377536167'
+  alias: Octoprint Start
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.octoprint_printing
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - data:
+      entity_id: scene.kjeller_bod_pa
+    service: scene.turn_on
   mode: single
