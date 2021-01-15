@@ -37,3 +37,23 @@ alt_av:
     entity_id: media_player.kitchen,media_player.office,media_player.bedroom,media_player.livingroom,media_player.sonos_move
     service: media_player.media_stop
   mode: single
+autolas_av:
+  alias: Autolås Av
+  sequence:
+  - service: verisure.disable_autolock
+    data:
+      device_serial: 2B97 PDXT
+  - service: verisure.disable_autolock
+    data:
+      device_serial: 2BDA ERNE
+  mode: single
+autolas_pa:
+  alias: Autolås På
+  sequence:
+  - service: verisure.enable_autolock
+    data:
+      device_serial: 2BDA ERNE
+  - service: verisure.enable_autolock
+    data:
+      device_serial: 2B97 PDXT
+  mode: single
