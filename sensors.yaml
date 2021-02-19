@@ -9,30 +9,6 @@
       unit_of_measurement: "m/s"
     date_short:
       value_template: "{{ strptime(states('sensor.date'), '%Y-%m-%d').strftime('%a %-d') }}"
-- platform: miflora
-  name: "flower1_spathiphyllum"
-  mac: "C4:7C:8D:66:2D:BC"
-  force_update: true
-- platform: miflora
-  name: "flower2_palme"
-  mac: "C4:7C:8D:66:29:3E"
-  force_update: true
-- platform: miflora
-  name: "flower4_ginseng"
-  mac: "C4:7C:8D:66:25:C9"
-  force_update: true
-- platform: miflora
-  name: "flower6_drageblod_trapp"
-  mac: "80:EA:CA:88:D8:D0"
-  force_update: true
-- platform: miflora
-  name: "flower7_drageblod_kjeller"
-  mac: "80:EA:CA:88:D7:61"
-  force_update: true
-- platform: miflora
-  name: "flower8_kontor"
-  mac: "80:EA:CA:88:D8:0D"
-  force_update: true
 - platform: mqtt
   name: "Kjeller Temperatur"
   state_topic: "humidity/basement"
