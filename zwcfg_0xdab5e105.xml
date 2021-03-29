@@ -11,7 +11,7 @@
 			</CommandClass>
 		</CommandClasses>
 	</Node>
-	<Node id="5" name="Gang Oppe" location="" basic="4" generic="16" specific="1" roletype="5" devicetype="1792" nodetype="0" type="Binary Power Switch" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" secured="true" query_stage="Complete">
+	<Node id="5" name="Gang Oppe" location="" basic="4" generic="16" specific="1" roletype="5" devicetype="1792" nodetype="0" type="Binary Power Switch" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" secured="true" query_stage="Associations">
 		<Manufacturer id="10f" name="FIBARO System">
 			<Product type="403" id="1000" name="FGS213 Switch" />
 		</Manufacturer>
@@ -335,7 +335,7 @@
 			</CommandClass>
 		</CommandClasses>
 	</Node>
-	<Node id="6" name="" location="" basic="4" generic="16" specific="1" roletype="5" devicetype="1792" nodetype="0" type="Binary Power Switch" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" query_stage="ProtocolInfo">
+	<Node id="6" name="" location="" basic="4" generic="16" specific="1" roletype="5" devicetype="1792" nodetype="0" type="Binary Power Switch" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" query_stage="Probe">
 		<Manufacturer id="176" name="Telldus">
 			<Product type="3" id="1" name="TZWP-100 Plug-in Switch" />
 		</Manufacturer>
@@ -447,7 +447,7 @@
 			</CommandClass>
 		</CommandClasses>
 	</Node>
-	<Node id="7" name="Spisestua" location="" basic="4" generic="17" specific="1" roletype="5" devicetype="1536" nodetype="0" type="Multilevel Power Switch" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" secured="true" query_stage="Complete">
+	<Node id="7" name="Spisestua" location="" basic="4" generic="17" specific="1" roletype="5" devicetype="1536" nodetype="0" type="Multilevel Power Switch" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" secured="true" query_stage="Associations">
 		<Manufacturer id="10f" name="FIBARO System">
 			<Product type="102" id="1000" name="FGD212 Dimmer 2" />
 		</Manufacturer>
@@ -466,7 +466,7 @@
 				<Instance index="2" endpoint="2" />
 				<Instance index="3" endpoint="1" />
 				<Instance index="4" endpoint="2" />
-				<Value type="byte" genre="user" instance="1" index="0" label="Level" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="63" />
+				<Value type="byte" genre="user" instance="1" index="0" label="Level" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="20" />
 				<Value type="button" genre="user" instance="1" index="1" label="On" units="" read_only="false" write_only="true" verify_changes="false" poll_intensity="0" min="0" max="0" />
 				<Value type="button" genre="user" instance="1" index="2" label="Off" units="" read_only="false" write_only="true" verify_changes="false" poll_intensity="0" min="0" max="0" />
 				<Value type="bool" genre="system" instance="1" index="3" label="Ignore Start Level" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="True" />
@@ -518,12 +518,12 @@
 			<CommandClass id="49" name="COMMAND_CLASS_SENSOR_MULTILEVEL" version="4" request_flags="1" innif="true">
 				<Instance index="1" endpoint="1" />
 				<Instance index="2" endpoint="1" />
-				<Value type="decimal" genre="user" instance="1" index="4" label="Power" units="W" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="10.4" />
+				<Value type="decimal" genre="user" instance="1" index="4" label="Power" units="W" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="3.6" />
 			</CommandClass>
 			<CommandClass id="50" name="COMMAND_CLASS_METER" version="3" request_flags="3" innif="true">
 				<Instance index="1" endpoint="1" />
 				<Instance index="2" endpoint="1" />
-				<Value type="decimal" genre="user" instance="1" index="0" label="Energy" units="kWh" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="294.09" />
+				<Value type="decimal" genre="user" instance="1" index="0" label="Energy" units="kWh" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="294.12" />
 				<Value type="decimal" genre="user" instance="1" index="8" label="Power" units="W" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="6.0" />
 				<Value type="bool" genre="user" instance="1" index="32" label="Exporting" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="False" />
 				<Value type="button" genre="system" instance="1" index="33" label="Reset" units="" read_only="false" write_only="true" verify_changes="false" poll_intensity="0" min="0" max="0" />
@@ -903,7 +903,7 @@
 			</CommandClass>
 		</CommandClasses>
 	</Node>
-	<Node id="9" name="Gang Nede" location="" basic="4" generic="17" specific="1" roletype="5" devicetype="1536" nodetype="0" type="Multilevel Power Switch" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" secured="true" query_stage="Complete">
+	<Node id="9" name="Gang Nede" location="" basic="4" generic="17" specific="1" roletype="5" devicetype="1536" nodetype="0" type="Multilevel Power Switch" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" secured="true" query_stage="Associations">
 		<Manufacturer id="10f" name="FIBARO System">
 			<Product type="102" id="1000" name="FGD212 Dimmer 2" />
 		</Manufacturer>
@@ -951,11 +951,11 @@
 			</CommandClass>
 			<CommandClass id="49" name="COMMAND_CLASS_SENSOR_MULTILEVEL" version="4" request_flags="1" innif="true">
 				<Instance index="1" endpoint="1" />
-				<Value type="decimal" genre="user" instance="1" index="4" label="Power" units="W" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="8.8" />
+				<Value type="decimal" genre="user" instance="1" index="4" label="Power" units="W" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="9.0" />
 			</CommandClass>
 			<CommandClass id="50" name="COMMAND_CLASS_METER" version="3" request_flags="3" innif="true">
 				<Instance index="1" endpoint="1" />
-				<Value type="decimal" genre="user" instance="1" index="0" label="Energy" units="kWh" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="208.04" />
+				<Value type="decimal" genre="user" instance="1" index="0" label="Energy" units="kWh" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="208.08" />
 				<Value type="decimal" genre="user" instance="1" index="8" label="Power" units="W" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="8.8" />
 				<Value type="bool" genre="user" instance="1" index="32" label="Exporting" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="False" />
 				<Value type="button" genre="system" instance="1" index="33" label="Reset" units="" read_only="false" write_only="true" verify_changes="false" poll_intensity="0" min="0" max="0" />
@@ -1311,7 +1311,7 @@
 			</CommandClass>
 		</CommandClasses>
 	</Node>
-	<Node id="10" name="Vitrineskapet" location="" basic="4" generic="16" specific="1" roletype="5" devicetype="1792" nodetype="0" type="Binary Power Switch" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" secured="true" query_stage="Complete">
+	<Node id="10" name="Vitrineskapet" location="" basic="4" generic="16" specific="1" roletype="5" devicetype="1792" nodetype="0" type="Binary Power Switch" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" secured="true" query_stage="Associations">
 		<Manufacturer id="10f" name="FIBARO System">
 			<Product type="602" id="1001" name="FGWPE/F Wall Plug Gen5" />
 		</Manufacturer>
@@ -1337,12 +1337,12 @@
 			</CommandClass>
 			<CommandClass id="49" name="COMMAND_CLASS_SENSOR_MULTILEVEL" version="5" innif="true">
 				<Instance index="1" />
-				<Value type="decimal" genre="user" instance="1" index="4" label="Power" units="W" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="13.1" />
+				<Value type="decimal" genre="user" instance="1" index="4" label="Power" units="W" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="12.4" />
 				<Value type="decimal" genre="user" instance="1" index="32" label="Frequency" units="Hz" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="50.03" />
 			</CommandClass>
 			<CommandClass id="50" name="COMMAND_CLASS_METER" version="2" request_flags="2" innif="true">
 				<Instance index="1" />
-				<Value type="decimal" genre="user" instance="1" index="0" label="Energy" units="kWh" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="52.95" />
+				<Value type="decimal" genre="user" instance="1" index="0" label="Energy" units="kWh" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="52.99" />
 				<Value type="decimal" genre="user" instance="1" index="1" label="Previous Reading" units="kWh" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="-2150.4" />
 				<Value type="int" genre="user" instance="1" index="2" label="Interval" units="seconds" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="-2147483648" max="2147483647" value="4096" />
 				<Value type="decimal" genre="user" instance="1" index="8" label="Power" units="W" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="0.0" />
@@ -1808,7 +1808,7 @@
 			</CommandClass>
 		</CommandClasses>
 	</Node>
-	<Node id="13" name="" location="" basic="4" generic="24" specific="1" roletype="4" devicetype="5632" nodetype="0" type="Basic Wall Controller" listening="false" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" secured="true" query_stage="Complete">
+	<Node id="13" name="" location="" basic="4" generic="24" specific="1" roletype="4" devicetype="5632" nodetype="0" type="Basic Wall Controller" listening="false" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" secured="true" query_stage="CacheLoad">
 		<Manufacturer id="10f" name="FIBARO System">
 			<Product type="f01" id="1000" name="FGPB101 Button" />
 		</Manufacturer>
@@ -2016,7 +2016,7 @@
 			</CommandClass>
 		</CommandClasses>
 	</Node>
-	<Node id="14" name="" location="" basic="4" generic="17" specific="1" roletype="5" devicetype="1536" nodetype="0" type="Multilevel Power Switch" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" secured="true" query_stage="Complete">
+	<Node id="14" name="" location="" basic="4" generic="17" specific="1" roletype="5" devicetype="1536" nodetype="0" type="Multilevel Power Switch" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" secured="true" query_stage="Associations">
 		<Manufacturer id="10f" name="FIBARO System">
 			<Product type="102" id="1000" name="FGD212 Dimmer 2" />
 		</Manufacturer>
@@ -2068,7 +2068,7 @@
 			</CommandClass>
 			<CommandClass id="50" name="COMMAND_CLASS_METER" version="3" request_flags="3" innif="true">
 				<Instance index="1" endpoint="1" />
-				<Value type="decimal" genre="user" instance="1" index="0" label="Energy" units="kWh" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="41.47" />
+				<Value type="decimal" genre="user" instance="1" index="0" label="Energy" units="kWh" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="41.49" />
 				<Value type="decimal" genre="user" instance="1" index="8" label="Power" units="W" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="8.6" />
 				<Value type="bool" genre="user" instance="1" index="32" label="Exporting" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="False" />
 				<Value type="button" genre="system" instance="1" index="33" label="Reset" units="" read_only="false" write_only="true" verify_changes="false" poll_intensity="0" min="0" max="0" />
@@ -2424,7 +2424,7 @@
 			</CommandClass>
 		</CommandClasses>
 	</Node>
-	<Node id="15" name="" location="" basic="4" generic="17" specific="1" roletype="5" devicetype="1536" nodetype="0" type="Multilevel Power Switch" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" secured="true" query_stage="Complete">
+	<Node id="15" name="" location="" basic="4" generic="17" specific="1" roletype="5" devicetype="1536" nodetype="0" type="Multilevel Power Switch" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" secured="true" query_stage="Associations">
 		<Manufacturer id="10f" name="FIBARO System">
 			<Product type="102" id="1000" name="FGD212 Dimmer 2" />
 		</Manufacturer>
@@ -2472,11 +2472,11 @@
 			</CommandClass>
 			<CommandClass id="49" name="COMMAND_CLASS_SENSOR_MULTILEVEL" version="4" request_flags="1" innif="true">
 				<Instance index="1" endpoint="1" />
-				<Value type="decimal" genre="user" instance="1" index="4" label="Power" units="W" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="9.9" />
+				<Value type="decimal" genre="user" instance="1" index="4" label="Power" units="W" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="11.0" />
 			</CommandClass>
 			<CommandClass id="50" name="COMMAND_CLASS_METER" version="3" request_flags="3" innif="true">
 				<Instance index="1" endpoint="1" />
-				<Value type="decimal" genre="user" instance="1" index="0" label="Energy" units="kWh" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="55.37" />
+				<Value type="decimal" genre="user" instance="1" index="0" label="Energy" units="kWh" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="55.41" />
 				<Value type="decimal" genre="user" instance="1" index="8" label="Power" units="W" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="10.4" />
 				<Value type="bool" genre="user" instance="1" index="32" label="Exporting" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="False" />
 				<Value type="button" genre="system" instance="1" index="33" label="Reset" units="" read_only="false" write_only="true" verify_changes="false" poll_intensity="0" min="0" max="0" />
@@ -2832,7 +2832,7 @@
 			</CommandClass>
 		</CommandClasses>
 	</Node>
-	<Node id="17" name="" location="" basic="4" generic="16" specific="1" roletype="5" devicetype="1792" nodetype="0" type="Binary Power Switch" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" secured="true" query_stage="Complete">
+	<Node id="17" name="" location="" basic="4" generic="16" specific="1" roletype="5" devicetype="1792" nodetype="0" type="Binary Power Switch" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" secured="true" query_stage="Associations">
 		<Manufacturer id="10f" name="FIBARO System">
 			<Product type="403" id="1000" name="FGS213 Switch" />
 		</Manufacturer>
@@ -3166,7 +3166,7 @@
 			</CommandClass>
 		</CommandClasses>
 	</Node>
-	<Node id="18" name="" location="" basic="4" generic="33" specific="1" roletype="6" devicetype="3079" nodetype="0" type="Routing Multilevel Sensor" listening="false" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" secured="true" query_stage="Complete">
+	<Node id="18" name="" location="" basic="4" generic="33" specific="1" roletype="6" devicetype="3079" nodetype="0" type="Routing Multilevel Sensor" listening="false" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" secured="true" query_stage="Associations">
 		<Manufacturer id="86" name="Aeotec">
 			<Product type="2" id="64" name="ZW100 MultiSensor 6" />
 		</Manufacturer>
@@ -3183,9 +3183,9 @@
 			</CommandClass>
 			<CommandClass id="49" name="COMMAND_CLASS_SENSOR_MULTILEVEL" version="5" innif="true">
 				<Instance index="1" />
-				<Value type="decimal" genre="user" instance="1" index="1" label="Temperature" units="C" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="20.0" />
-				<Value type="decimal" genre="user" instance="1" index="3" label="Luminance" units="lux" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="25" />
-				<Value type="decimal" genre="user" instance="1" index="5" label="Relative Humidity" units="%" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="42" />
+				<Value type="decimal" genre="user" instance="1" index="1" label="Temperature" units="C" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="20.6" />
+				<Value type="decimal" genre="user" instance="1" index="3" label="Luminance" units="lux" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="10" />
+				<Value type="decimal" genre="user" instance="1" index="5" label="Relative Humidity" units="%" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="40" />
 				<Value type="decimal" genre="user" instance="1" index="27" label="Ultraviolet" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="0" />
 			</CommandClass>
 			<CommandClass id="90" name="COMMAND_CLASS_DEVICE_RESET_LOCALLY" version="1" request_flags="4" innif="true">
@@ -3438,7 +3438,7 @@
 			</CommandClass>
 		</CommandClasses>
 	</Node>
-	<Node id="19" name="" location="" basic="4" generic="16" specific="1" roletype="5" devicetype="1792" nodetype="0" type="Binary Power Switch" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" secured="true" query_stage="Complete">
+	<Node id="19" name="" location="" basic="4" generic="16" specific="1" roletype="5" devicetype="1792" nodetype="0" type="Binary Power Switch" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" secured="true" query_stage="Probe">
 		<Manufacturer id="10f" name="FIBARO System">
 			<Product type="403" id="1000" name="FGS213 Switch" />
 		</Manufacturer>
@@ -3765,7 +3765,7 @@
 			</CommandClass>
 		</CommandClasses>
 	</Node>
-	<Node id="20" name="" location="" basic="4" generic="16" specific="1" roletype="5" devicetype="1792" nodetype="0" type="Binary Power Switch" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" secured="true" query_stage="Complete">
+	<Node id="20" name="" location="" basic="4" generic="16" specific="1" roletype="5" devicetype="1792" nodetype="0" type="Binary Power Switch" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" secured="true" query_stage="CacheLoad">
 		<Manufacturer id="10f" name="FIBARO System">
 			<Product type="203" id="1000" name="FGS223 Double Relay" />
 		</Manufacturer>
@@ -4103,7 +4103,7 @@
 			</CommandClass>
 		</CommandClasses>
 	</Node>
-	<Node id="22" name="" location="" basic="4" generic="16" specific="1" roletype="5" devicetype="1792" nodetype="0" type="Binary Power Switch" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" secured="true" query_stage="Complete">
+	<Node id="22" name="" location="" basic="4" generic="16" specific="1" roletype="5" devicetype="1792" nodetype="0" type="Binary Power Switch" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" secured="true" query_stage="CacheLoad">
 		<Manufacturer id="159" name="Qubino">
 			<Product type="2" id="53" name="ZMNHND1 Flush 1D relay" />
 		</Manufacturer>
@@ -4697,7 +4697,7 @@
 			</CommandClass>
 		</CommandClasses>
 	</Node>
-	<Node id="27" name="KjellerSensor" location="" basic="4" generic="33" specific="1" roletype="6" devicetype="3079" nodetype="0" type="Routing Multilevel Sensor" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" secured="true" query_stage="Complete">
+	<Node id="27" name="KjellerSensor" location="" basic="4" generic="33" specific="1" roletype="6" devicetype="3079" nodetype="0" type="Routing Multilevel Sensor" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" secured="true" query_stage="CacheLoad">
 		<Manufacturer id="86" name="AEON Labs">
 			<Product type="2" id="64" name="ZW100 MultiSensor 6" />
 		</Manufacturer>
@@ -4713,9 +4713,9 @@
 			</CommandClass>
 			<CommandClass id="49" name="COMMAND_CLASS_SENSOR_MULTILEVEL" version="5" innif="true">
 				<Instance index="1" />
-				<Value type="decimal" genre="user" instance="1" index="1" label="Temperature" units="C" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="22.6" />
-				<Value type="decimal" genre="user" instance="1" index="3" label="Luminance" units="lux" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="0" />
-				<Value type="decimal" genre="user" instance="1" index="5" label="Relative Humidity" units="%" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="36" />
+				<Value type="decimal" genre="user" instance="1" index="1" label="Temperature" units="C" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="22.8" />
+				<Value type="decimal" genre="user" instance="1" index="3" label="Luminance" units="lux" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="17" />
+				<Value type="decimal" genre="user" instance="1" index="5" label="Relative Humidity" units="%" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="33" />
 				<Value type="decimal" genre="user" instance="1" index="27" label="Ultraviolet" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="0" />
 			</CommandClass>
 			<CommandClass id="90" name="COMMAND_CLASS_DEVICE_RESET_LOCALLY" version="1" request_flags="4" innif="true">
@@ -4967,7 +4967,7 @@
 			</CommandClass>
 		</CommandClasses>
 	</Node>
-	<Node id="29" name="" location="" basic="4" generic="16" specific="1" roletype="5" devicetype="1792" nodetype="0" type="Binary Power Switch" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" secured="true" query_stage="Complete">
+	<Node id="29" name="" location="" basic="4" generic="16" specific="1" roletype="5" devicetype="1792" nodetype="0" type="Binary Power Switch" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" secured="true" query_stage="CacheLoad">
 		<Manufacturer id="10f" name="FIBARO System">
 			<Product type="403" id="1000" name="FGS213 Switch" />
 		</Manufacturer>
@@ -5295,7 +5295,7 @@
 			</CommandClass>
 		</CommandClasses>
 	</Node>
-	<Node id="30" name="" location="" basic="4" generic="17" specific="1" roletype="5" devicetype="1536" nodetype="0" type="Multilevel Power Switch" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" secured="true" query_stage="Complete">
+	<Node id="30" name="" location="" basic="4" generic="17" specific="1" roletype="5" devicetype="1536" nodetype="0" type="Multilevel Power Switch" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" secured="true" query_stage="CacheLoad">
 		<Manufacturer id="10f" name="FIBARO System">
 			<Product type="102" id="1000" name="FGD212 Dimmer 2" />
 		</Manufacturer>
@@ -5343,12 +5343,12 @@
 			</CommandClass>
 			<CommandClass id="49" name="COMMAND_CLASS_SENSOR_MULTILEVEL" version="4" innif="true">
 				<Instance index="1" endpoint="1" />
-				<Value type="decimal" genre="user" instance="1" index="4" label="Power" units="W" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="30.3" />
+				<Value type="decimal" genre="user" instance="1" index="4" label="Power" units="W" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="30.5" />
 				<Value type="decimal" genre="user" instance="1" index="32" label="Frequency" units="Hz" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="49.98" />
 			</CommandClass>
 			<CommandClass id="50" name="COMMAND_CLASS_METER" version="3" request_flags="2" innif="true">
 				<Instance index="1" endpoint="1" />
-				<Value type="decimal" genre="user" instance="1" index="0" label="Energy" units="kWh" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="149.33" />
+				<Value type="decimal" genre="user" instance="1" index="0" label="Energy" units="kWh" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="149.42" />
 				<Value type="decimal" genre="user" instance="1" index="1" label="Previous Reading" units="kWh" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="-2046820352" />
 				<Value type="int" genre="user" instance="1" index="2" label="Interval" units="seconds" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="-2147483648" max="2147483647" value="16384" />
 				<Value type="decimal" genre="user" instance="1" index="8" label="Power" units="W" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="30.3" />
@@ -5710,7 +5710,7 @@
 			</CommandClass>
 		</CommandClasses>
 	</Node>
-	<Node id="31" name="" location="" basic="4" generic="8" specific="6" roletype="5" devicetype="4608" nodetype="0" type="General Thermostat V2" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" secured="true" query_stage="Complete">
+	<Node id="31" name="" location="" basic="4" generic="8" specific="6" roletype="5" devicetype="4608" nodetype="0" type="General Thermostat V2" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" secured="true" query_stage="CacheLoad">
 		<Manufacturer id="19b" name="ThermoFloor AS">
 			<Product type="1" id="1" name="Heatit Thermostat TF 021" />
 		</Manufacturer>
@@ -5872,7 +5872,7 @@
 			</CommandClass>
 		</CommandClasses>
 	</Node>
-	<Node id="32" name="" location="" basic="4" generic="8" specific="6" roletype="5" devicetype="4608" nodetype="0" type="General Thermostat V2" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" secured="true" query_stage="Complete">
+	<Node id="32" name="" location="" basic="4" generic="8" specific="6" roletype="5" devicetype="4608" nodetype="0" type="General Thermostat V2" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" secured="true" query_stage="CacheLoad">
 		<Manufacturer id="19b" name="ThermoFloor AS">
 			<Product type="1" id="1" name="Heatit Thermostat TF 021" />
 		</Manufacturer>
@@ -6035,7 +6035,7 @@
 			</CommandClass>
 		</CommandClasses>
 	</Node>
-	<Node id="33" name="" location="" basic="4" generic="17" specific="1" roletype="5" devicetype="1536" nodetype="0" type="Multilevel Power Switch" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" secured="true" query_stage="Complete">
+	<Node id="33" name="" location="" basic="4" generic="17" specific="1" roletype="5" devicetype="1536" nodetype="0" type="Multilevel Power Switch" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" secured="true" query_stage="CacheLoad">
 		<Manufacturer id="10f" name="FIBARO System">
 			<Product type="102" id="1000" name="FGD212 Dimmer 2" />
 		</Manufacturer>
@@ -6083,11 +6083,11 @@
 			</CommandClass>
 			<CommandClass id="49" name="COMMAND_CLASS_SENSOR_MULTILEVEL" version="4" request_flags="1" innif="true">
 				<Instance index="1" endpoint="1" />
-				<Value type="decimal" genre="user" instance="1" index="4" label="Power" units="W" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="84.4" />
+				<Value type="decimal" genre="user" instance="1" index="4" label="Power" units="W" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="85.0" />
 			</CommandClass>
 			<CommandClass id="50" name="COMMAND_CLASS_METER" version="3" request_flags="3" innif="true">
 				<Instance index="1" endpoint="1" />
-				<Value type="decimal" genre="user" instance="1" index="0" label="Energy" units="kWh" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="362.24" />
+				<Value type="decimal" genre="user" instance="1" index="0" label="Energy" units="kWh" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="362.58" />
 				<Value type="decimal" genre="user" instance="1" index="8" label="Power" units="W" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="84.1" />
 				<Value type="bool" genre="user" instance="1" index="32" label="Exporting" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="False" />
 				<Value type="button" genre="system" instance="1" index="33" label="Reset" units="" read_only="false" write_only="true" verify_changes="false" poll_intensity="0" min="0" max="0" />
@@ -6443,7 +6443,7 @@
 			</CommandClass>
 		</CommandClasses>
 	</Node>
-	<Node id="34" name="" location="" basic="4" generic="17" specific="1" roletype="5" devicetype="1536" nodetype="0" type="Multilevel Power Switch" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" secured="true" query_stage="Complete">
+	<Node id="34" name="" location="" basic="4" generic="17" specific="1" roletype="5" devicetype="1536" nodetype="0" type="Multilevel Power Switch" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" secured="true" query_stage="CacheLoad">
 		<Manufacturer id="10f" name="FIBARO System">
 			<Product type="102" id="1000" name="FGD212 Dimmer 2" />
 		</Manufacturer>
@@ -6491,11 +6491,11 @@
 			</CommandClass>
 			<CommandClass id="49" name="COMMAND_CLASS_SENSOR_MULTILEVEL" version="4" request_flags="1" innif="true">
 				<Instance index="1" endpoint="1" />
-				<Value type="decimal" genre="user" instance="1" index="4" label="Power" units="W" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="16.0" />
+				<Value type="decimal" genre="user" instance="1" index="4" label="Power" units="W" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="16.3" />
 			</CommandClass>
 			<CommandClass id="50" name="COMMAND_CLASS_METER" version="3" request_flags="3" innif="true">
 				<Instance index="1" endpoint="1" />
-				<Value type="decimal" genre="user" instance="1" index="0" label="Energy" units="kWh" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="26.77" />
+				<Value type="decimal" genre="user" instance="1" index="0" label="Energy" units="kWh" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="26.82" />
 				<Value type="decimal" genre="user" instance="1" index="8" label="Power" units="W" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="0.0" />
 				<Value type="bool" genre="user" instance="1" index="32" label="Exporting" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="False" />
 				<Value type="button" genre="system" instance="1" index="33" label="Reset" units="" read_only="false" write_only="true" verify_changes="false" poll_intensity="0" min="0" max="0" />
@@ -6851,7 +6851,7 @@
 			</CommandClass>
 		</CommandClasses>
 	</Node>
-	<Node id="35" name="" location="" basic="4" generic="16" specific="1" roletype="5" devicetype="1792" nodetype="0" type="Binary Power Switch" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" secured="true" query_stage="Complete">
+	<Node id="35" name="" location="" basic="4" generic="16" specific="1" roletype="5" devicetype="1792" nodetype="0" type="Binary Power Switch" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" secured="true" query_stage="CacheLoad">
 		<Manufacturer id="10f" name="FIBARO System">
 			<Product type="403" id="1000" name="FGS213 Switch" />
 		</Manufacturer>
@@ -7175,7 +7175,7 @@
 			</CommandClass>
 		</CommandClasses>
 	</Node>
-	<Node id="36" name="" location="" basic="4" generic="16" specific="1" roletype="5" devicetype="1792" nodetype="0" type="Binary Power Switch" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" secured="true" query_stage="Complete">
+	<Node id="36" name="" location="" basic="4" generic="16" specific="1" roletype="5" devicetype="1792" nodetype="0" type="Binary Power Switch" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" secured="true" query_stage="CacheLoad">
 		<Manufacturer id="10f" name="FIBARO System">
 			<Product type="203" id="1000" name="FGS223 Double Relay" />
 		</Manufacturer>
