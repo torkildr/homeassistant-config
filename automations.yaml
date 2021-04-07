@@ -245,3 +245,29 @@
       entity_id: scene.kjeller_bod_pa
     service: scene.turn_on
   mode: single
+- id: '1617095260219'
+  alias: Plantelampe På
+  description: ''
+  trigger:
+  - platform: time
+    at: 08:00
+  condition: []
+  action:
+  - type: turn_on
+    device_id: 924d4e04e1d4430ebf27dc71e456d864
+    entity_id: switch.plantelampe
+    domain: switch
+  mode: single
+- id: '1617095288500'
+  alias: Plantelampe Av
+  description: ''
+  trigger:
+  - platform: time
+    at: '20:00'
+  condition: []
+  action:
+  - type: turn_off
+    device_id: 924d4e04e1d4430ebf27dc71e456d864
+    entity_id: switch.plantelampe
+    domain: switch
+  mode: single
