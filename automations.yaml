@@ -202,12 +202,13 @@
   condition: []
   action:
   - data:
-      brightness: 204
+      brightness: 255
       transition: 3
     entity_id:
     - light.garderobe_stine
     - light.garderobe_torkild
     service: light.turn_on
+  mode: single
 - id: '1600448609147'
   alias: Tag Garasje is scanned
   description: ''
