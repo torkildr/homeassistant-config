@@ -24,9 +24,6 @@ hoy_varme:
     condition: numeric_state
     entity_id: sensor.netatmo_outdoor_min_temp
   mode: single
-garasjeport:
-  alias: Garasjeport
-  sequence: []
 alt_av:
   alias: Alt Av
   sequence:

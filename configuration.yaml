@@ -100,7 +100,5 @@ plant: !include plants.yaml
 script: !include scripts.yaml
 sensor: !include sensors.yaml
 binary_sensor: !include binary_sensor.yaml
-lock: !include locks.yaml
 light: !include lights.yaml
-cover: !include covers.yaml
 
