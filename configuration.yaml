@@ -31,12 +31,6 @@ zwave:
   device_config: !include zwave_device_config.yaml
   device_config_glob: !include zwave_device_config_glob.yaml
 
-verisure:
-  username: !secret verisure_user
-  password: !secret verisure_pass
-  default_lock_code: !secret verisure_pin
-  code_digits: 6
-
 emulated_hue:
   listen_port: 8300
   expose_by_default: false
@@ -47,9 +41,6 @@ notify:
     vapid_email: !secret vapid_email
     vapid_pub_key: !secret vapid_pub_key
     vapid_prv_key: !secret vapid_prv_key
-
-tibber:
-  access_token: !secret tibber_token
 
 config:
 
@@ -76,9 +67,6 @@ tts:
 google:
   client_id: !secret google_cal_client_id
   client_secret: !secret google_cal_secret
-
-speedtestdotnet:
-  scan_interval: '02:00:00'
 
 octoprint:
   host: !secret octoprint_host
