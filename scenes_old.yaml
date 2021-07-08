@@ -10,6 +10,8 @@
     light.kontor_spot: true
     light.stuelampe: true
     light.stue_spot: true
+    light.kjokken_arbeidslys: true
+    light.kjokken_stemningslys: true
 
 - name: Alt av
   entities:
@@ -26,6 +28,8 @@
     light.soverom_seng: false
     light.stuelampe: false
     light.stue_spot: false
+    light.kjokken_arbeidslys: false
+    light.kjokken_stemningslys: false
 
 - name: Gang På
   entities:
