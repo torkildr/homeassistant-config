@@ -3,3 +3,9 @@ all_persons:
   entities:
     - person.stine
     - person.torkild
+locks:
+  name: Locks
+  entities:
+    - lock.hoveddor
+    - lock.boddor
+    - cover.garage_door

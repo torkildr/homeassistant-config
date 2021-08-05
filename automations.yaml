@@ -260,3 +260,38 @@
     entity_id: switch.plantelampe
     domain: switch
   mode: single
+- id: '1625740809871'
+  alias: Garasjelys på
+  description: ''
+  trigger:
+  - platform: device
+    device_id: 48be7c045b27f5f27f6e40300f660060
+    domain: cover
+    entity_id: cover.garage_door
+    type: opening
+  - platform: device
+    device_id: 48be7c045b27f5f27f6e40300f660060
+    domain: cover
+    entity_id: cover.garage_door
+    type: opened
+  condition: []
+  action:
+  - service: light.turn_on
+    target:
+      entity_id: light.garasjelys
+  mode: single
+- id: '1625740885485'
+  alias: Garasjelys av
+  description: ''
+  trigger:
+  - platform: device
+    device_id: 48be7c045b27f5f27f6e40300f660060
+    domain: cover
+    entity_id: cover.garage_door
+    type: closed
+  condition: []
+  action:
+  - service: light.turn_off
+    target:
+      entity_id: light.garasjelys
+  mode: single
