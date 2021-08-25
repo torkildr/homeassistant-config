@@ -13,6 +13,7 @@
     light.kjokken_arbeidslys: true
     light.kjokken_stemningslys: true
     light.spisestue: true
+    light.kjokkenoy: true
 
 - name: Alt av
   entities:
@@ -32,6 +33,7 @@
     light.kjokken_arbeidslys: false
     light.kjokken_stemningslys: false
     light.spisestue: false
+    light.kjokkenoy: false
 
 - name: Gang På
   entities:
