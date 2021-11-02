@@ -2,27 +2,38 @@ lav_varme:
   alias: Lav Varme
   sequence:
   - data:
-      entity_id: climate.kontor
       temperature: 18
     service: climate.set_temperature
-  - data:
-      entity_id: climate.stue
-      temperature: 18
-    service: climate.set_temperature
+    target:
+      entity_id:
+      - climate.dass
+      - climate.kjokken
+      - climate.stue
+      - climate.kontor
+      - climate.gang
+  mode: single
 hoy_varme:
   alias: Høy Varme
   sequence:
   - data:
-      entity_id: climate.kontor
       temperature: 23
     service: climate.set_temperature
+    target:
+      entity_id:
+      - climate.kontor
+      - climate.gang
   - data:
-      entity_id: climate.stue
       temperature: 23.5
     service: climate.set_temperature
-  - below: '15'
-    condition: numeric_state
-    entity_id: sensor.netatmo_outdoor_min_temp
+    target:
+      entity_id:
+      - climate.stue
+      - climate.dass
+  - service: climate.set_temperature
+    data:
+      temperature: 22.5
+    target:
+      entity_id: climate.kjokken
   mode: single
 alt_av:
   alias: Alt Av
@@ -31,26 +42,32 @@ alt_av:
     entity_id: scene.alt_av
     service: scene.turn_on
   - data: {}
-    entity_id: media_player.kitchen,media_player.office,media_player.bedroom,media_player.livingroom,media_player.sonos_move
     service: media_player.media_stop
+    target:
+      entity_id:
+      - media_player.basement
+      - media_player.bedroom
+      - media_player.kitchen
+      - media_player.livingroom
+      - media_player.sonos_move
   mode: single
 autolas_av:
   alias: Autolås Av
   sequence:
   - service: verisure.disable_autolock
-    data:
-      device_serial: 2B97 PDXT
-  - service: verisure.disable_autolock
-    data:
-      device_serial: 2BDA ERNE
+    data: {}
+    target:
+      entity_id:
+      - lock.boddor
+      - lock.hoveddor
   mode: single
 autolas_pa:
   alias: Autolås På
   sequence:
   - service: verisure.enable_autolock
-    data:
-      device_serial: 2BDA ERNE
-  - service: verisure.enable_autolock
-    data:
-      device_serial: 2B97 PDXT
+    data: {}
+    target:
+      entity_id:
+      - lock.boddor
+      - lock.hoveddor
   mode: single

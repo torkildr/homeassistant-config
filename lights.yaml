@@ -25,3 +25,9 @@
 - platform: switch
   name: Garasjelys
   entity_id: switch.garasjelys
+- platform: switch
+  name: Julelys
+  entity_id: switch.popp_smart_outdoor_plug_ip44_rated
+- platform: switch
+  name: Plantelampe
+  entity_id: switch.plantelampe

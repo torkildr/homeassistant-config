@@ -1,53 +1,22 @@
-- id: '1550001835411'
-  alias: 'The Button #1, 1 click'
-  description: Gang
-  trigger:
-  - event_data:
-      entity_id: zwave.fibaro_button_1
-      scene_data: 7680
-      scene_id: 1
-    event_type: zwave.scene_activated
-    platform: event
-  condition: []
-  action:
-  - data:
-      desired_state: toggle
-    service: script.garasjeport
 - id: '1550606425406'
-  alias: Keyfob Car, Square
+  alias: Keyfob, Square Pressed
   trigger:
   - event_data:
-      entity_id: zwave.fibaro_keyfob_carkey
-      scene_data: 7680
-      scene_id: 1
-    event_type: zwave.scene_activated
+      node_id: 11
+      property: scene
+      property_key: '001'
+      value: KeyPressed
+    event_type: zwave_js_value_notification
     platform: event
   condition: []
-  action:
-  - data:
-      desired_state: toggle
-    service: script.garasjeport
-- id: '1551629601000'
-  alias: Keyfob Car, Cross
-  trigger:
-  - event_data:
-      entity_id: zwave.fibaro_keyfob_carkey
-      scene_data: 7680
-      scene_id: 3
-    event_type: zwave.scene_activated
-    platform: event
-  condition: []
-  action:
-  - data:
-      entity_id: lock.hoveddor
-    service: lock.unlock
+  action: []
 - id: '155821217700'
   alias: Kjeller Bod Enter
   trigger:
-  - entity_id: sensor.kjeller_bod_motion
-    from: '0'
+  - entity_id: binary_sensor.kjeller_bod_sensor_home_security_motion_detection
     platform: state
-    to: '8'
+    to: 'on'
+    from: 'off'
   action:
   - data:
       entity_id: scene.kjeller_bod_pa
@@ -55,11 +24,11 @@
 - id: '155821217701'
   alias: Kjeller Bod Exit
   trigger:
-  - entity_id: sensor.kjeller_bod_motion
+  - entity_id: binary_sensor.kjeller_bod_sensor_home_security_motion_detection
     for: 00:15
-    from: '8'
     platform: state
-    to: '0'
+    from: 'on'
+    to: 'off'
   condition:
   - condition: state
     entity_id: binary_sensor.octoprint_printing
@@ -72,16 +41,15 @@
 - id: '1551651260765'
   alias: Motion Gang
   trigger:
-  - entity_id: sensor.gang_motion
-    from: '0'
+  - entity_id: binary_sensor.gang_sensor_home_security_motion_detection
     platform: state
-    to: '8'
+    to: 'on'
   condition:
   - condition: state
     entity_id: switch.yttergang
     state: 'off'
-  - after: 06:00
-    before: '21:00'
+  - after: 06:00:00
+    before: '21:00:00'
     condition: time
   action:
   - data:
@@ -92,10 +60,10 @@
   alias: 'The Button #2, 1 click'
   trigger:
   - event_data:
-      entity_id: zwave.fibaro_button_2
-      scene_data: 7680
-      scene_id: 1
-    event_type: zwave.scene_activated
+      node_id: 25
+      property: scene
+      property_key: '001'
+    event_type: zwave_js_value_notification
     platform: event
   condition: []
   action:
@@ -171,11 +139,11 @@
   condition: []
   action:
   - data: {}
-    entity_id: lock.hoveddor
     service: lock.lock
-  - data: {}
-    entity_id: lock.boddor
-    service: lock.lock
+    target:
+      entity_id:
+      - lock.boddor
+      - lock.hoveddor
 - id: '1587456032987'
   alias: Garderobelys Svakt
   description: ''
@@ -239,11 +207,11 @@
   description: ''
   trigger:
   - platform: time
-    at: 08:00
+    at: 08:00:00
   condition: []
   action:
   - type: turn_on
-    device_id: 924d4e04e1d4430ebf27dc71e456d864
+    device_id: 36a9aa044d32f7e0481e7511bf4d6449
     entity_id: switch.plantelampe
     domain: switch
   mode: single
@@ -252,11 +220,11 @@
   description: ''
   trigger:
   - platform: time
-    at: '20:00'
+    at: '20:00:00'
   condition: []
   action:
   - type: turn_off
-    device_id: 924d4e04e1d4430ebf27dc71e456d864
+    device_id: 36a9aa044d32f7e0481e7511bf4d6449
     entity_id: switch.plantelampe
     domain: switch
   mode: single
@@ -294,4 +262,30 @@
   - service: light.turn_off
     target:
       entity_id: light.garasjelys
+  mode: single
+- id: '1635085004822'
+  alias: Julelys på ved solnedgang
+  description: ''
+  trigger:
+  - platform: sun
+    event: sunset
+  condition: []
+  action:
+  - type: turn_on
+    device_id: b025f501dc90b4173f927b5220719695
+    entity_id: switch.popp_smart_outdoor_plug_ip44_rated
+    domain: switch
+  mode: single
+- id: '1635085028962'
+  alias: Julelys av ved soloppgang
+  description: ''
+  trigger:
+  - platform: sun
+    event: sunrise
+  condition: []
+  action:
+  - type: turn_off
+    device_id: b025f501dc90b4173f927b5220719695
+    entity_id: switch.popp_smart_outdoor_plug_ip44_rated
+    domain: switch
   mode: single

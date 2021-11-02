@@ -3,7 +3,7 @@ html5_push_registrations.conf
 phue.conf
 plex.conf
 .uuid
-home-assistant.log
+home-assistant.log*
 tts/
 OZW_Log.txt
 pyozw.sqlite
