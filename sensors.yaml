@@ -2,13 +2,6 @@
   display_options:
     - "time"
     - "date"
-- platform: template
-  sensors:
-    wind_strength_mps:
-      value_template: "{{ (states('sensor.netatmo_wind_strength') | float / 3.6) | round(1) }}"
-      unit_of_measurement: "m/s"
-    date_short:
-      value_template: "{{ strptime(states('sensor.date'), '%Y-%m-%d').strftime('%a %-d') }}"
 - platform: mqtt
   name: "Kjeller Temperatur"
   state_topic: "humidity/basement"
