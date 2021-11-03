@@ -31,3 +31,6 @@
 - platform: switch
   name: Plantelampe
   entity_id: switch.plantelampe
+- platform: switch
+  name: Stålampe
+  entity_id: switch.stalampe

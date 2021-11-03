@@ -1,15 +1,3 @@
-- id: '1550606425406'
-  alias: Keyfob, Square Pressed
-  trigger:
-  - event_data:
-      node_id: 11
-      property: scene
-      property_key: '001'
-      value: KeyPressed
-    event_type: zwave_js_value_notification
-    platform: event
-  condition: []
-  action: []
 - id: '155821217700'
   alias: Kjeller Bod Enter
   trigger:
@@ -56,20 +44,6 @@
       entity_id: scene.gang_pa
     service: scene.turn_on
   mode: single
-- id: '1554639006348'
-  alias: 'The Button #2, 1 click'
-  trigger:
-  - event_data:
-      node_id: 25
-      property: scene
-      property_key: '001'
-    event_type: zwave_js_value_notification
-    platform: event
-  condition: []
-  action:
-  - data:
-      entity_id: lock.hoveddor
-    service: lock.unlock
 - id: '1572437961272'
   alias: Varme, Lav når borte eller kveld
   description: ''

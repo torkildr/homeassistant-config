@@ -66,12 +66,6 @@ google:
   client_id: !secret google_cal_client_id
   client_secret: !secret google_cal_secret
 
-octoprint:
-  host: !secret octoprint_host
-  api_key: !secret octoprint_key
-  bed: true
-  number_of_tools: 1
-
 camera:
   - platform: mjpeg
     name: OctoPrint

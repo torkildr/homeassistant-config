@@ -14,6 +14,7 @@
     light.kjokken_stemningslys: true
     light.spisestue: true
     light.kjokkenoy: true
+    light.stalampe: true
 
 - name: Alt av
   entities:
@@ -34,6 +35,7 @@
     light.kjokken_stemningslys: false
     light.spisestue: false
     light.kjokkenoy: false
+    light.stalampe: false
 
 - name: Gang På
   entities:
