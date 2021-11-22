@@ -50,6 +50,7 @@ alt_av:
       - media_player.kitchen
       - media_player.livingroom
       - media_player.sonos_move
+  - service: script.lav_varme
   mode: single
 autolas_av:
   alias: Autolås Av
@@ -71,3 +72,10 @@ autolas_pa:
       - lock.boddor
       - lock.hoveddor
   mode: single
+alt_pa:
+  sequence:
+  - scene: scene.alt_pa
+  - service: script.hoy_varme
+  mode: single
+  alias: Alt På
+  icon: mdi:lightbulb-on-outline

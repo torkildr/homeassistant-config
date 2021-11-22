@@ -22,3 +22,7 @@ cover.stue:
   device_class: blind
 script.alt_av:
   icon: mdi:lightbulb-off-outline
+binary_sensor.garasjeport_alarm_2:
+  device_class: garage_door
+binary_sensor.garasjeport_in2:
+  device_class: garage_door

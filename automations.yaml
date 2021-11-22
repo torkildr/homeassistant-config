@@ -18,9 +18,14 @@
     from: 'on'
     to: 'off'
   condition:
-  - condition: state
-    entity_id: binary_sensor.octoprint_printing
-    state: 'off'
+  - condition: or
+    conditions:
+    - condition: state
+      entity_id: binary_sensor.octoprint_printing
+      state: 'off'
+    - condition: state
+      entity_id: binary_sensor.octoprint_printing
+      state: unavailable
   action:
   - data:
       entity_id: scene.kjeller_bod_av
@@ -67,8 +72,9 @@
     platform: state
     to: home
   condition:
-  - before: '22:00'
+  - before: '22:00:00'
     condition: time
+    after: 06:00:00
   action:
   - service: script.hoy_varme
 - id: '1572894057692'
@@ -216,6 +222,11 @@
     domain: cover
     entity_id: cover.garage_door
     type: opened
+  - type: opened
+    platform: device
+    device_id: ed86bed515f26038b50d25f88e0725a5
+    entity_id: binary_sensor.garasjeport_in2
+    domain: binary_sensor
   condition: []
   action:
   - service: light.turn_on
@@ -231,6 +242,11 @@
     domain: cover
     entity_id: cover.garage_door
     type: closed
+  - type: not_opened
+    platform: device
+    device_id: ed86bed515f26038b50d25f88e0725a5
+    entity_id: binary_sensor.garasjeport_in2
+    domain: binary_sensor
   condition: []
   action:
   - service: light.turn_off
