@@ -12,28 +12,19 @@ lav_varme:
       - climate.kontor
       - climate.gang
   mode: single
-hoy_varme:
-  alias: Høy Varme
+ekstra_hoy_varme:
+  alias: Ekstra Høy Varme
   sequence:
   - data:
-      temperature: 23
+      temperature: 25
     service: climate.set_temperature
     target:
       entity_id:
-      - climate.kontor
       - climate.gang
-  - data:
-      temperature: 23.5
-    service: climate.set_temperature
-    target:
-      entity_id:
-      - climate.stue
       - climate.dass
-  - service: climate.set_temperature
-    data:
-      temperature: 22.5
-    target:
-      entity_id: climate.kjokken
+      - climate.kjokken
+      - climate.kontor
+      - climate.stue
   mode: single
 alt_av:
   alias: Alt Av
@@ -79,3 +70,17 @@ alt_pa:
   mode: single
   alias: Alt På
   icon: mdi:lightbulb-on-outline
+hoy_varme:
+  alias: Høy Varme
+  sequence:
+  - data:
+      temperature: 23
+    service: climate.set_temperature
+    target:
+      entity_id:
+      - climate.gang
+      - climate.dass
+      - climate.kjokken
+      - climate.kontor
+      - climate.stue
+  mode: single

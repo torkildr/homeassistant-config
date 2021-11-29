@@ -108,6 +108,22 @@
   action:
   - data: {}
     service: script.hoy_varme
+- id: '1583994012442'
+  alias: Varme, Ekstra høy på tidlig morgen ukedager
+  description: ''
+  trigger:
+  - at: 03:00
+    platform: time
+  condition:
+  - condition: state
+    entity_id: binary_sensor.workday_sensor
+    state: 'on'
+  - condition: state
+    entity_id: group.all_persons
+    state: home
+  action:
+  - data: {}
+    service: script.ekstra_hoy_varme
 - id: '1586514634514'
   alias: Lås dører når ingen hjemme
   description: ''
