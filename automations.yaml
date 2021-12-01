@@ -112,7 +112,7 @@
   alias: Varme, Ekstra høy på tidlig morgen ukedager
   description: ''
   trigger:
-  - at: 03:00
+  - at: 04:00:00
     platform: time
   condition:
   - condition: state

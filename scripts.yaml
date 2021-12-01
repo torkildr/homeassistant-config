@@ -16,7 +16,7 @@ ekstra_hoy_varme:
   alias: Ekstra Høy Varme
   sequence:
   - data:
-      temperature: 25
+      temperature: 24
     service: climate.set_temperature
     target:
       entity_id:
@@ -74,7 +74,7 @@ hoy_varme:
   alias: Høy Varme
   sequence:
   - data:
-      temperature: 23
+      temperature: 21
     service: climate.set_temperature
     target:
       entity_id:
