@@ -20,3 +20,5 @@ node-red
 home-assistant_v2.db-shm
 home-assistant_v2.db-wal
 esphome/
+custom_components/hacs
+custom_components/unifiprotect

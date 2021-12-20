@@ -295,3 +295,16 @@
     entity_id: switch.popp_smart_outdoor_plug_ip44_rated
     domain: switch
   mode: single
+- id: '1638961078194'
+  alias: UniFi Protect Doorbell Notifications
+  description: ''
+  use_blueprint:
+    path: briis/doorbell_event.yaml
+    input:
+      lock_entity: lock.hoveddor
+      device_filter:
+        device_id: 4998f70dee450c2aedc4987454e7bdc0
+      time_format: '%H:%M'
+      base_image_url: https://pz7cv2ag25qss8qgtihrgix7y08kr07d.ui.nabu.casa
+      base_ha_url: https://pz7cv2ag25qss8qgtihrgix7y08kr07d.ui.nabu.casa
+      lovelace_view: /lovelace/door
