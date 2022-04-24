@@ -307,3 +307,5 @@
       base_ha_url: https://pz7cv2ag25qss8qgtihrgix7y08kr07d.ui.nabu.casa
       base_image_url: https://pz7cv2ag25qss8qgtihrgix7y08kr07d.ui.nabu.casa
       lovelace_view: /lovelace/door
+      tts_target: cloud_say
+      lock_tts: Døren blir nå låst opp

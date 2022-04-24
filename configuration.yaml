@@ -16,10 +16,6 @@ frontend:
 
 system_health:
 
-mqtt:
-  username: homeassistant
-  password: !secret mqtt_password
-
 influxdb:
 
 recorder:
@@ -46,8 +42,6 @@ http:
   use_x_forwarded_for: true
   trusted_proxies: 172.18.0.0/24
 
-updater:
-
 discovery:
 
 conversation:
@@ -65,12 +59,6 @@ tts:
 google:
   client_id: !secret google_cal_client_id
   client_secret: !secret google_cal_secret
-
-camera:
-  - platform: mjpeg
-    name: OctoPrint
-    still_image_url: !secret octoprint_snapshot
-    mjpeg_url: !secret octoprint_stream
 
 group: !include groups.yaml
 automation: !include automations.yaml

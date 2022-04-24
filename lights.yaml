@@ -14,9 +14,6 @@
   name: Treningsrom Spot
   entity_id: switch.treningsrom_spot
 - platform: switch
-  name: Barnerom
-  entity_id: switch.barnerom
-- platform: switch
   name: Kjellerbod
   entity_id: switch.kjeller_bod
 - platform: switch

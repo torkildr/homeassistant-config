@@ -84,3 +84,17 @@ hoy_varme:
       - climate.kontor
       - climate.stue
   mode: single
+ringeklokkeinfo:
+  sequence:
+  - service: tts.cloud_say
+    data:
+      entity_id: media_player.doorbell_speaker
+      message: '{{states(''input_text.ringeklokke'')}}'
+  - service: unifiprotect.set_doorbell_message
+    data:
+      entity_id: select.doorbell_text_doorbell
+      message: '{{states("input_text.ringeklokke")}}'
+      duration: 1
+  mode: single
+  alias: Annonser Ringeklokke
+  icon: mdi:bullhorn

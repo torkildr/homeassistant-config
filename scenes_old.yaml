@@ -15,6 +15,9 @@
     light.spisestue: true
     light.kjokkenoy: true
     light.stalampe: true
+    light.barnerom:
+      state: true
+      brightness: 255
 
 - name: Alt av
   entities:
@@ -36,6 +39,9 @@
     light.spisestue: false
     light.kjokkenoy: false
     light.stalampe: false
+    light.barnerom:
+      state: true
+      brightness: 1
 
 - name: Gang På
   entities:

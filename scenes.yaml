@@ -66,10 +66,10 @@
     light.kjokken_stemningslys:
       supported_color_modes:
       - brightness
-      color_mode: brightness
-      brightness: 44
       friendly_name: Kjøkken Stemningslys
       supported_features: 32
+      color_mode: brightness
+      brightness: 44
       state: 'on'
     select.kjokkenoy_local_protection_state_10:
       options:
@@ -134,10 +134,10 @@
     light.stue_spot:
       supported_color_modes:
       - brightness
-      color_mode: brightness
-      brightness: 116
       friendly_name: Stue Spot
       supported_features: 32
+      color_mode: brightness
+      brightness: 116
       state: 'on'
     select.kontor_spot_local_protection_state_2:
       options:
@@ -193,5 +193,31 @@
       state: Unprotected
     switch.yttergang:
       friendly_name: Yttergang
+      state: 'on'
+    light.barnerom_2:
+      supported_color_modes:
+      - brightness
+      friendly_name: Barnerom (2)
+      supported_features: 32
+      state: 'off'
+    select.barnerom_local_protection_state:
+      options:
+      - Unprotected
+      - NoOperationPossible
+      friendly_name: 'Barnerom: Local protection state'
+      state: Unprotected
+    select.barnerom_rf_protection_state:
+      options:
+      - Unprotected
+      - NoControl
+      friendly_name: 'Barnerom: RF protection state'
+      state: Unprotected
+    light.barnerom:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 224
+      friendly_name: Barnerom
+      supported_features: 32
       state: 'on'
   icon: mdi:laptop
