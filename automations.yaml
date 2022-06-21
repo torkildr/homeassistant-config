@@ -309,3 +309,18 @@
       lovelace_view: /lovelace/door
       tts_target: cloud_say
       lock_tts: Døren blir nå låst opp
+- id: '1654607252325'
+  alias: Doorbell detects person
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - switch.doorbell_detections_person
+    to: person
+  condition: []
+  action:
+  - service: notify.notify
+    data:
+      message: There is a person at the door
+      title: Person detected at the door
+  mode: single

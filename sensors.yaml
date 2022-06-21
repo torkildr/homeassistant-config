@@ -6,14 +6,3 @@
   sensors:
     date_short:
       value_template: "{{ strptime(states('sensor.date'), '%Y-%m-%d').strftime('%a %-d') }}"
-- platform: mqtt
-  name: "Kjeller Temperatur"
-  state_topic: "humidity/basement"
-  unit_of_measurement: "°C"
-  value_template: "{{ value_json.temperature }}"
-- platform: mqtt
-  name: "Kjeller Luftfuktighet"
-  state_topic: "humidity/basement"
-  unit_of_measurement: "%"
-  value_template: "{{ value_json.humidity }}"
-  device_class: humidity

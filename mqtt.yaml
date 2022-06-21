@@ -1,0 +1,10 @@
+sensor:
+  - name: "Kjeller Temperatur"
+    state_topic: "humidity/basement"
+    unit_of_measurement: "°C"
+    value_template: "{{ value_json.temperature }}"
+  - name: "Kjeller Luftfuktighet"
+    state_topic: "humidity/basement"
+    unit_of_measurement: "%"
+    value_template: "{{ value_json.humidity }}"
+    device_class: humidity

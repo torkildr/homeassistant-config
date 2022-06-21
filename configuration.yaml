@@ -31,10 +31,6 @@ notify:
     vapid_email: !secret vapid_email
     vapid_pub_key: !secret vapid_pub_key
     vapid_prv_key: !secret vapid_prv_key
-  - name: slack
-    platform: slack
-    api_key: !secret slack_token
-    default_channel: "#general"
 
 config:
 
@@ -56,10 +52,6 @@ tts:
   - platform: google_translate
     service_name: google_say
 
-google:
-  client_id: !secret google_cal_client_id
-  client_secret: !secret google_cal_secret
-
 group: !include groups.yaml
 automation: !include automations.yaml
 scene: !include scenes.yaml
@@ -67,6 +59,7 @@ scene old: !include scenes_old.yaml
 plant: !include plants.yaml
 script: !include scripts.yaml
 sensor: !include sensors.yaml
+mqtt: !include mqtt.yaml
 binary_sensor: !include binary_sensor.yaml
 light: !include lights.yaml
 
