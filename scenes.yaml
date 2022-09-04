@@ -1,223 +1,38 @@
 - id: '1639119662690'
   name: Hverdag
   entities:
-    select.kjeller_vegg_local_protection_state_5:
-      options:
-      - Unprotected
-      - NoOperationPossible
-      friendly_name: 'Kjeller Vegg: Local protection state'
-      state: Unprotected
-    select.kjeller_vegg_rf_protection_state_5:
-      options:
-      - Unprotected
-      - NoControl
-      friendly_name: 'Kjeller Vegg: RF protection state'
-      state: Unprotected
     light.kjeller_vegg:
-      supported_color_modes:
-      - brightness
-      color_mode: brightness
       brightness: 165
-      friendly_name: Kjeller Vegg
-      supported_features: 32
       state: 'on'
-    select.kjeller_tak_local_protection_state_4:
-      options:
-      - Unprotected
-      - NoOperationPossible
-      friendly_name: 'Kjeller Tak: Local protection state'
-      state: Unprotected
-    select.kjeller_tak_rf_protection_state_4:
-      options:
-      - Unprotected
-      - NoControl
-      friendly_name: 'Kjeller Tak: RF protection state'
-      state: Unprotected
     light.kjeller_tak:
-      supported_color_modes:
-      - brightness
-      color_mode: brightness
       brightness: 255
-      friendly_name: Kjeller Tak
-      supported_features: 32
       state: 'on'
     switch.stalampe:
-      friendly_name: Stålampe
       state: 'on'
-    select.stalampe_local_protection_state:
-      options:
-      - Unprotected
-      - ProtectedBySequence
-      - NoOperationPossible
-      friendly_name: 'Stålampe: Local protection state'
-      state: Unprotected
-    select.kjokken_stemningslys_local_protection_state_9:
-      options:
-      - Unprotected
-      - NoOperationPossible
-      friendly_name: 'Kjøkken Stemningslys: Local protection state'
-      state: Unprotected
-    select.kjokken_stemningslys_rf_protection_state_9:
-      options:
-      - Unprotected
-      - NoControl
-      friendly_name: 'Kjøkken Stemningslys: RF protection state'
-      state: Unprotected
     light.kjokken_stemningslys:
-      supported_color_modes:
-      - brightness
-      friendly_name: Kjøkken Stemningslys
-      supported_features: 32
-      color_mode: brightness
       brightness: 44
       state: 'on'
-    select.kjokkenoy_local_protection_state_10:
-      options:
-      - Unprotected
-      - NoOperationPossible
-      friendly_name: 'Kjøkkenøy: Local protection state'
-      state: Unprotected
-    select.kjokkenoy_rf_protection_state_10:
-      options:
-      - Unprotected
-      - NoControl
-      friendly_name: 'Kjøkkenøy: RF protection state'
-      state: Unprotected
     light.kjokkenoy:
-      supported_color_modes:
-      - brightness
-      color_mode: brightness
       brightness: 15
-      friendly_name: Kjøkkenøy
-      supported_features: 32
       state: 'on'
-    select.kjokken_arbeidslys_local_protection_state_8:
-      options:
-      - Unprotected
-      - NoOperationPossible
-      friendly_name: 'Kjøkken Arbeidslys: Local protection state'
-      state: Unprotected
-    select.kjokken_arbeidslys_rf_protection_state_8:
-      options:
-      - Unprotected
-      - NoControl
-      friendly_name: 'Kjøkken Arbeidslys: RF protection state'
-      state: Unprotected
     light.kjokken_arbeidslys:
-      supported_color_modes:
-      - brightness
-      color_mode: brightness
       brightness: 111
-      friendly_name: Kjøkken Arbeidslys
-      supported_features: 32
       state: 'on'
     light.nuppelampa:
-      supported_color_modes:
-      - brightness
-      color_mode: brightness
       brightness: 254
-      friendly_name: Nuppelampa
-      supported_features: 33
       state: 'on'
-    select.stue_spot_local_protection_state_6:
-      options:
-      - Unprotected
-      - NoOperationPossible
-      friendly_name: 'Stue Spot: Local protection state'
-      state: Unprotected
-    select.stue_spot_rf_protection_state_6:
-      options:
-      - Unprotected
-      - NoControl
-      friendly_name: 'Stue Spot: RF protection state'
-      state: Unprotected
     light.stue_spot:
-      supported_color_modes:
-      - brightness
-      friendly_name: Stue Spot
-      supported_features: 32
-      color_mode: brightness
       brightness: 116
       state: 'on'
-    select.kontor_spot_local_protection_state_2:
-      options:
-      - Unprotected
-      - NoOperationPossible
-      friendly_name: 'Kontor Spot: Local protection state'
-      state: Unprotected
-    select.kontor_spot_rf_protection_state_2:
-      options:
-      - Unprotected
-      - NoControl
-      friendly_name: 'Kontor Spot: RF protection state'
-      state: Unprotected
     light.kontor_spot:
-      supported_color_modes:
-      - brightness
-      color_mode: brightness
       brightness: 242
-      friendly_name: Kontor Spot
-      supported_features: 32
       state: 'on'
-    select.gang_nede_local_protection_state_3:
-      options:
-      - Unprotected
-      - NoOperationPossible
-      friendly_name: 'Gang Nede: Local protection state'
-      state: Unprotected
-    select.gang_nede_rf_protection_state_3:
-      options:
-      - Unprotected
-      - NoControl
-      friendly_name: 'Gang Nede: RF protection state'
-      state: Unprotected
     light.gang_nede:
-      supported_color_modes:
-      - brightness
-      color_mode: brightness
       brightness: 178
-      friendly_name: Gang Nede
-      supported_features: 32
       state: 'on'
-    select.yttergang_local_protection_state_2:
-      options:
-      - Unprotected
-      - NoOperationPossible
-      friendly_name: 'Yttergang: Local protection state'
-      state: Unprotected
-    select.yttergang_rf_protection_state_2:
-      options:
-      - Unprotected
-      - NoControl
-      friendly_name: 'Yttergang: RF protection state'
-      state: Unprotected
     switch.yttergang:
-      friendly_name: Yttergang
       state: 'on'
-    light.barnerom_2:
-      supported_color_modes:
-      - brightness
-      friendly_name: Barnerom (2)
-      supported_features: 32
-      state: 'off'
-    select.barnerom_local_protection_state:
-      options:
-      - Unprotected
-      - NoOperationPossible
-      friendly_name: 'Barnerom: Local protection state'
-      state: Unprotected
-    select.barnerom_rf_protection_state:
-      options:
-      - Unprotected
-      - NoControl
-      friendly_name: 'Barnerom: RF protection state'
-      state: Unprotected
     light.barnerom:
-      supported_color_modes:
-      - brightness
-      color_mode: brightness
       brightness: 224
-      friendly_name: Barnerom
-      supported_features: 32
       state: 'on'
   icon: mdi:laptop

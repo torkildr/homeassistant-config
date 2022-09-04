@@ -39,14 +39,11 @@
     light.spisestue: false
     light.kjokkenoy: false
     light.stalampe: false
-    light.barnerom:
-      state: true
-      brightness: 1
+    light.barnerom: false
 
 - name: Gang På
   entities:
     light.gang_trapp: true
-    light.gang_oppe: true
     light.yttergang: true
     light.gang_nede:
       state: true
@@ -61,4 +58,3 @@
   entities:
     light.kjellerbod: false
     light.arbeidsbenk: false
-

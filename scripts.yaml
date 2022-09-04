@@ -42,7 +42,9 @@ alt_av:
       - media_player.livingroom
       - media_player.sonos_move
   - service: script.lav_varme
+    data: {}
   mode: single
+  icon: mdi:lightbulb-off-outline
 autolas_av:
   alias: Autolås Av
   sequence:
