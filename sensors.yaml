@@ -1,0 +1,8 @@
+- platform: time_date
+  display_options:
+    - "time"
+    - "date"
+- platform: template
+  sensors:
+    date_short:
+      value_template: "{{ strptime(states('sensor.date'), '%Y-%m-%d').strftime('%a %-d') }}"
