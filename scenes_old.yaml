@@ -43,7 +43,6 @@
 
 - name: Gang På
   entities:
-    light.gang_trapp: true
     light.yttergang: true
     light.gang_nede:
       state: true

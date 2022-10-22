@@ -76,7 +76,7 @@ hoy_varme:
   alias: Høy Varme
   sequence:
   - data:
-      temperature: 21
+      temperature: 20
     service: climate.set_temperature
     target:
       entity_id:

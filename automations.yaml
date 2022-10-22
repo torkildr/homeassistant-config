@@ -108,22 +108,6 @@
   action:
   - data: {}
     service: script.hoy_varme
-- id: '1583994012442'
-  alias: Varme, Ekstra høy på tidlig morgen ukedager
-  description: ''
-  trigger:
-  - at: 04:00:00
-    platform: time
-  condition:
-  - condition: state
-    entity_id: binary_sensor.workday_sensor
-    state: 'on'
-  - condition: state
-    entity_id: group.all_persons
-    state: home
-  action:
-  - data: {}
-    service: script.ekstra_hoy_varme
 - id: '1586514634514'
   alias: Lås dører når ingen hjemme
   description: ''
@@ -309,18 +293,98 @@
       lovelace_view: /lovelace/door
       tts_target: cloud_say
       lock_tts: Døren blir nå låst opp
-- id: '1654607252325'
-  alias: Doorbell detects person
+- id: '1664892858557'
+  alias: Prusa Mini Idle
   description: ''
   trigger:
   - platform: state
     entity_id:
-    - switch.doorbell_detections_person
-    to: person
-  condition: []
+    - sensor.prusamini
+    for:
+      hours: 1
+      minutes: 0
+      seconds: 0
+    from: printing
+  - platform: state
+    entity_id:
+    - sensor.octoprint_current_state
+    from: Printing
+    for:
+      hours: 1
+      minutes: 0
+      seconds: 0
+  condition:
+  - condition: not
+    conditions:
+    - condition: or
+      conditions:
+      - condition: state
+        entity_id: sensor.octoprint_current_state
+        state: Printing
+      - condition: state
+        entity_id: sensor.prusamini
+        state: printing
   action:
-  - service: notify.notify
+  - service: switch.turn_off
+    data: {}
+    target:
+      device_id: 455aa6d98d3d51d313c2c555afa11682
+  mode: single
+- id: '1666426398324'
+  alias: Varmepumpe bytt til vifte når varmt
+  description: ''
+  trigger:
+  - platform: device
+    device_id: edf1f4de0fa0fdfcfdf0437d82b329a8
+    domain: climate
+    entity_id: climate.stue
+    type: current_temperature_changed
+    above: 24
+  condition:
+  - condition: device
+    device_id: 7d6a1331d797e1b09dbcf705e11ecf34
+    domain: climate
+    entity_id: climate.varmepumpe
+    type: is_hvac_mode
+    hvac_mode: heat
+  action:
+  - service: climate.set_hvac_mode
     data:
-      message: There is a person at the door
-      title: Person detected at the door
+      hvac_mode: fan_only
+    target:
+      device_id: 7d6a1331d797e1b09dbcf705e11ecf34
+  - service: climate.set_fan_mode
+    data:
+      fan_mode: '4'
+    target:
+      device_id: 7d6a1331d797e1b09dbcf705e11ecf34
+  mode: single
+- id: '1666426636912'
+  alias: Varmepumpe bytt til varme når kaldere
+  description: ''
+  trigger:
+  - platform: device
+    device_id: edf1f4de0fa0fdfcfdf0437d82b329a8
+    domain: climate
+    entity_id: climate.stue
+    type: current_temperature_changed
+    below: 23
+  condition:
+  - condition: device
+    device_id: 7d6a1331d797e1b09dbcf705e11ecf34
+    domain: climate
+    entity_id: climate.varmepumpe
+    type: is_hvac_mode
+    hvac_mode: fan_only
+  action:
+  - service: climate.set_fan_mode
+    data:
+      fan_mode: auto
+    target:
+      device_id: 7d6a1331d797e1b09dbcf705e11ecf34
+  - service: climate.set_hvac_mode
+    data:
+      hvac_mode: heat
+    target:
+      device_id: 7d6a1331d797e1b09dbcf705e11ecf34
   mode: single
