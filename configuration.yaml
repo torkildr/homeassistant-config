@@ -8,6 +8,11 @@ influxdb:
 
 recorder:
   purge_keep_days: 7
+  exclude:
+    entities:
+      - sensor.time
+      - sensor.date
+      - sensor.date_short
 
 emulated_hue:
   listen_port: 8300

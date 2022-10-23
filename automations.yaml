@@ -339,7 +339,7 @@
     domain: climate
     entity_id: climate.stue
     type: current_temperature_changed
-    above: 24
+    above: 25
   condition:
   - condition: device
     device_id: 7d6a1331d797e1b09dbcf705e11ecf34
@@ -368,7 +368,7 @@
     domain: climate
     entity_id: climate.stue
     type: current_temperature_changed
-    below: 23
+    below: 25
   condition:
   - condition: device
     device_id: 7d6a1331d797e1b09dbcf705e11ecf34
