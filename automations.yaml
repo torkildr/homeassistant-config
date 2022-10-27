@@ -355,7 +355,7 @@
       device_id: 7d6a1331d797e1b09dbcf705e11ecf34
   - service: climate.set_fan_mode
     data:
-      fan_mode: '4'
+      fan_mode: '3'
     target:
       device_id: 7d6a1331d797e1b09dbcf705e11ecf34
   mode: single
