@@ -118,7 +118,8 @@
     to: not_home
   condition: []
   action:
-  - data: {}
+  - data:
+      code: '213943'
     service: lock.lock
     target:
       entity_id:

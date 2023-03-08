@@ -6,3 +6,7 @@
   sensors:
     date_short:
       value_template: "{{ strptime(states('sensor.date'), '%Y-%m-%d').strftime('%a %-d') }}"
+- platform: entur_public_transport
+  stop_ids:
+    - "NSR:StopPlace:59637" # Rosenholm
+    - "NSR:StopPlace:5683" # Nordbråtan

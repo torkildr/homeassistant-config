@@ -15,9 +15,6 @@
     light.spisestue: true
     light.kjokkenoy: true
     light.stalampe: true
-    light.barnerom:
-      state: true
-      brightness: 255
 
 - name: Alt av
   entities:

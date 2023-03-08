@@ -4,6 +4,8 @@ frontend:
 
 system_health:
 
+my:
+
 influxdb:
 
 recorder:

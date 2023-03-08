@@ -1,38 +1,35 @@
-- id: '1639119662690'
+- id: "1639119662690"
   name: Hverdag
   entities:
     light.kjeller_vegg:
       brightness: 165
-      state: 'on'
+      state: "on"
     light.kjeller_tak:
       brightness: 255
-      state: 'on'
+      state: "on"
     switch.stalampe:
-      state: 'on'
+      state: "on"
     light.kjokken_stemningslys:
       brightness: 44
-      state: 'on'
+      state: "on"
     light.kjokkenoy:
       brightness: 15
-      state: 'on'
+      state: "on"
     light.kjokken_arbeidslys:
       brightness: 111
-      state: 'on'
+      state: "on"
     light.nuppelampa:
       brightness: 254
-      state: 'on'
+      state: "on"
     light.stue_spot:
       brightness: 116
-      state: 'on'
+      state: "on"
     light.kontor_spot:
       brightness: 242
-      state: 'on'
+      state: "on"
     light.gang_nede:
       brightness: 178
-      state: 'on'
+      state: "on"
     switch.yttergang:
-      state: 'on'
-    light.barnerom:
-      brightness: 224
-      state: 'on'
+      state: "on"
   icon: mdi:laptop
