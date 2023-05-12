@@ -325,6 +325,7 @@
       - condition: state
         entity_id: sensor.prusamini
         state: printing
+        enabled: false
   action:
   - service: switch.turn_off
     data: {}
@@ -388,4 +389,39 @@
       hvac_mode: heat
     target:
       device_id: 7d6a1331d797e1b09dbcf705e11ecf34
+  mode: single
+- id: '1683220669056'
+  alias: Sykkellader av når inaktiv
+  description: ''
+  trigger:
+  - platform: device
+    type: turned_on
+    device_id: 850e0240eb4a6a6806720efc2497176f
+    entity_id: switch.sykkellader
+    domain: switch
+    for:
+      hours: 4
+      minutes: 0
+      seconds: 0
+  - type: power
+    platform: device
+    device_id: 850e0240eb4a6a6806720efc2497176f
+    entity_id: sensor.sykkellader_electric_consumption_w
+    domain: sensor
+    below: 10
+    for:
+      hours: 0
+      minutes: 5
+      seconds: 0
+  condition:
+  - condition: device
+    type: is_on
+    device_id: 850e0240eb4a6a6806720efc2497176f
+    entity_id: switch.sykkellader
+    domain: switch
+  action:
+  - type: turn_off
+    device_id: 850e0240eb4a6a6806720efc2497176f
+    entity_id: switch.sykkellader
+    domain: switch
   mode: single

@@ -57,4 +57,3 @@ sensor: !include sensors.yaml
 mqtt: !include mqtt.yaml
 binary_sensor: !include binary_sensor.yaml
 light: !include lights.yaml
-
