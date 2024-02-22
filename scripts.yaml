@@ -43,6 +43,18 @@ alt_av:
       - media_player.sonos_move
   - service: script.lav_varme
     data: {}
+  - service: script.autolas_pa
+    data: {}
+  - service: script.juletre_av
+    data: {}
+    enabled: false
+  - condition: time
+    after: 06:00:00
+    before: '18:00:00'
+  - type: turn_off
+    device_id: e1e3ad4ebfc515c53c99bb5965b2d7b0
+    entity_id: 849ba7516b0a0b3594cf548071083028
+    domain: light
   mode: single
   icon: mdi:lightbulb-off-outline
 autolas_av:
@@ -69,6 +81,9 @@ alt_pa:
   sequence:
   - scene: scene.alt_pa
   - service: script.hoy_varme
+    data: {}
+  - service: script.juletre_pa
+    data: {}
   mode: single
   alias: Alt På
   icon: mdi:lightbulb-on-outline
@@ -79,12 +94,17 @@ hoy_varme:
       temperature: 20
     service: climate.set_temperature
     target:
-      entity_id:
-      - climate.gang
-      - climate.dass
-      - climate.kjokken
-      - climate.kontor
-      - climate.stue
+      device_id:
+      - 26b9c9ac5d20bbba8cdeae919875d213
+      - d1f96e4cb7dcba5555d4aaf156145d87
+      - bc5592016592d3324ecc3f662eb3d11b
+  - service: climate.set_temperature
+    target:
+      device_id:
+      - 4e9e5974cd4faaeea1beae5331e2067e
+      - edf1f4de0fa0fdfcfdf0437d82b329a8
+    data:
+      temperature: 19
   mode: single
 ringeklokkeinfo:
   sequence:
@@ -100,3 +120,56 @@ ringeklokkeinfo:
   mode: single
   alias: Annonser Ringeklokke
   icon: mdi:bullhorn
+garasjeportapner:
+  alias: Garasjeportåpner
+  sequence:
+  - type: turn_on
+    device_id: ed86bed515f26038b50d25f88e0725a5
+    entity_id: b6e46a2f09104cf26026c9163b0492e2
+    domain: switch
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 5
+      milliseconds: 0
+  mode: single
+juletre_av:
+  alias: Juletre Av
+  sequence:
+  - condition: state
+    entity_id: switch.juletre_off
+    state: 'off'
+  - repeat:
+      count: 5
+      sequence:
+      - service: switch.turn_on
+        data: {}
+        target:
+          entity_id: switch.juletre_off
+      - delay:
+          hours: 0
+          minutes: 0
+          seconds: 2
+          milliseconds: 0
+  mode: single
+  icon: mdi:string-lights-off
+juletre_pa:
+  alias: Juletre På
+  sequence:
+  - condition: state
+    entity_id: switch.juletre_on
+    state: 'off'
+  - repeat:
+      count: 5
+      sequence:
+      - service: switch.turn_on
+        data: {}
+        target:
+          entity_id: switch.juletre_on
+      - delay:
+          hours: 0
+          minutes: 0
+          seconds: 2
+          milliseconds: 0
+  mode: single
+  icon: mdi:string-lights

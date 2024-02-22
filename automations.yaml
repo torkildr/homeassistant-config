@@ -18,14 +18,20 @@
     from: 'on'
     to: 'off'
   condition:
-  - condition: or
+  - alias: Not Printing
+    condition: not
     conditions:
-    - condition: state
-      entity_id: binary_sensor.octoprint_printing
-      state: 'off'
-    - condition: state
-      entity_id: binary_sensor.octoprint_printing
-      state: unavailable
+    - condition: or
+      conditions:
+      - condition: state
+        entity_id: binary_sensor.octoprint_printing
+        state: 'on'
+        alias: OctoPrint Printing
+      - condition: state
+        entity_id: sensor.prusamini
+        state: printing
+        alias: Prusa Mini Printing
+      alias: OctoPrint or Prusa Mini
   action:
   - data:
       entity_id: scene.kjeller_bod_av
@@ -158,25 +164,17 @@
     - light.garderobe_torkild
     service: light.turn_on
   mode: single
-- id: '1600502553956'
-  alias: Tag Hoveddør is scanned
-  description: ''
-  trigger:
-  - platform: tag
-    tag_id: 749bf980-aed0-476c-8156-ae3e53dbb8aa
-  condition: []
-  action:
-  - service: lock.unlock
-    data: {}
-    entity_id: lock.hoveddor
-  mode: single
 - id: '1607377536167'
-  alias: Octoprint Start
+  alias: Prusa Mini - Start
   description: ''
   trigger:
   - entity_id: binary_sensor.octoprint_printing
     platform: state
     to: 'on'
+  - platform: state
+    entity_id:
+    - sensor.prusamini
+    to: printing
   condition: []
   action:
   - data:
@@ -213,16 +211,6 @@
   alias: Garasjelys på
   description: ''
   trigger:
-  - platform: device
-    device_id: 48be7c045b27f5f27f6e40300f660060
-    domain: cover
-    entity_id: cover.garage_door
-    type: opening
-  - platform: device
-    device_id: 48be7c045b27f5f27f6e40300f660060
-    domain: cover
-    entity_id: cover.garage_door
-    type: opened
   - type: opened
     platform: device
     device_id: ed86bed515f26038b50d25f88e0725a5
@@ -233,16 +221,12 @@
   - service: light.turn_on
     target:
       entity_id: light.garasjelys
+    data: {}
   mode: single
 - id: '1625740885485'
   alias: Garasjelys av
   description: ''
   trigger:
-  - platform: device
-    device_id: 48be7c045b27f5f27f6e40300f660060
-    domain: cover
-    entity_id: cover.garage_door
-    type: closed
   - type: not_opened
     platform: device
     device_id: ed86bed515f26038b50d25f88e0725a5
@@ -253,6 +237,7 @@
   - service: light.turn_off
     target:
       entity_id: light.garasjelys
+    data: {}
   mode: single
 - id: '1635085004822'
   alias: Julelys på ved solnedgang
@@ -295,17 +280,9 @@
       tts_target: cloud_say
       lock_tts: Døren blir nå låst opp
 - id: '1664892858557'
-  alias: Prusa Mini Idle
+  alias: Prusa Mini - Octoprint Idle
   description: ''
   trigger:
-  - platform: state
-    entity_id:
-    - sensor.prusamini
-    for:
-      hours: 1
-      minutes: 0
-      seconds: 0
-    from: printing
   - platform: state
     entity_id:
     - sensor.octoprint_current_state
@@ -317,20 +294,16 @@
   condition:
   - condition: not
     conditions:
-    - condition: or
-      conditions:
-      - condition: state
-        entity_id: sensor.octoprint_current_state
-        state: Printing
-      - condition: state
-        entity_id: sensor.prusamini
-        state: printing
-        enabled: false
+    - condition: state
+      entity_id: sensor.octoprint_current_state
+      state: Printing
+    alias: Not printing
   action:
   - service: switch.turn_off
     data: {}
     target:
       device_id: 455aa6d98d3d51d313c2c555afa11682
+    enabled: false
   mode: single
 - id: '1666426398324'
   alias: Varmepumpe bytt til vifte når varmt
@@ -424,4 +397,224 @@
     device_id: 850e0240eb4a6a6806720efc2497176f
     entity_id: switch.sykkellader
     domain: switch
+  mode: single
+- id: '1693335480646'
+  alias: Kjeller Lekkasje
+  description: ''
+  trigger:
+  - type: moist
+    platform: device
+    device_id: 0abda7781f5e5f2c99f7d6e8d4593897
+    entity_id: e402d52658264ba395b18c6ebb45f35a
+    domain: binary_sensor
+  condition: []
+  action:
+  - service: notify.notify
+    data:
+      message: Vann oppdaget på gulv i kjellerboden!
+      title: Lekkasje Kjeller!
+  mode: single
+- id: '1695122095265'
+  alias: Garasjeport lenge åpen
+  description: ''
+  trigger:
+  - type: opened
+    platform: device
+    device_id: ed86bed515f26038b50d25f88e0725a5
+    entity_id: 3dfd4eb94848c1f898c57472bad26282
+    domain: binary_sensor
+    for:
+      hours: 2
+      minutes: 0
+      seconds: 0
+  condition: []
+  action:
+  - service: notify.notify
+    data:
+      message: 'Garasjeport har vært lenge åpen '
+      title: Garasjeport åpen
+  mode: single
+- id: '1698525434241'
+  alias: Fibaro Button 2
+  description: ''
+  use_blueprint:
+    path: gsemet/zwave-js-fibaro-the-button-fgpb-101-v2021-12-08.yaml
+    input:
+      fibaro_thebutton: b59025eb73282788275f55402c520c36
+      key_held_down: []
+      key_pressed_1x:
+      - service: media_player.play_media
+        data:
+          media_content_id: https://open.spotify.com/track/5F8c71PbayLIedqmjskrhM?si=030eed80309b4e7f
+          media_content_type: music
+        target:
+          entity_id: media_player.livingroom
+        alias: Badebussen
+      key_pressed_2x:
+      - service: media_player.play_media
+        data:
+          media_content_type: music
+          media_content_id: https://open.spotify.com/track/5PTYydUwfxM8Q7KuqjmPxu?si=84130c9bc8564503
+        target:
+          device_id: 9be1d636ab984d40978892f5d7646ce5
+        alias: BlimE! - Den Ene
+      key_pressed_3x:
+      - service: media_player.play_media
+        data:
+          media_content_id: https://open.spotify.com/track/4qfRVjN1pI0LrKRNxQ1JwQ?si=bb1d53380c004356
+          media_content_type: music
+        target:
+          device_id: 9be1d636ab984d40978892f5d7646ce5
+        alias: Brannbamsen Bjørnis
+- id: '1699454114038'
+  alias: Globus - Morgen
+  description: ''
+  trigger:
+  - platform: time
+    at: 05:30:00
+  condition: []
+  action:
+  - service: scene.turn_on
+    target:
+      entity_id: scene.brage_sol_ned_opp
+    metadata: {}
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 3
+      milliseconds: 0
+  - service: scene.turn_on
+    target:
+      entity_id: scene.brage_sol_ned_opp
+    metadata: {}
+  mode: single
+- id: '1699454210870'
+  alias: Globus - Natt
+  description: ''
+  trigger:
+  - platform: time
+    at: '18:00:00'
+  condition: []
+  action:
+  - service: scene.turn_on
+    target:
+      entity_id: scene.brage_natt
+    metadata: {}
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 3
+      milliseconds: 0
+  - service: scene.turn_on
+    target:
+      entity_id: scene.brage_natt
+    metadata: {}
+  mode: single
+- id: '1699454243036'
+  alias: Globus - Dag
+  description: ''
+  trigger:
+  - platform: time
+    at: 06:00:00
+  condition: []
+  action:
+  - service: scene.turn_on
+    target:
+      entity_id: scene.globus_dag
+    metadata: {}
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 3
+      milliseconds: 0
+  - service: scene.turn_on
+    target:
+      entity_id: scene.globus_dag
+    metadata: {}
+  mode: single
+- id: '1700912825579'
+  alias: Prusa Mini - Prusa Link Idle
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - sensor.prusamini
+    for:
+      hours: 1
+      minutes: 0
+      seconds: 0
+    from: printing
+  condition:
+  - condition: not
+    conditions:
+    - condition: state
+      entity_id: sensor.prusamini
+      state: printing
+    alias: Is not printing
+  action:
+  - service: switch.turn_off
+    data: {}
+    target:
+      device_id: 455aa6d98d3d51d313c2c555afa11682
+    enabled: true
+  mode: single
+- id: '1701376347401'
+  alias: Prusa Mini - Material Unloaded
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - sensor.prusamini_material
+    to: '---'
+  condition:
+  - condition: state
+    entity_id: sensor.prusamini
+    state: printing
+  action:
+  - service: notify.mobile_app_torkild_s_pixel_7
+    data:
+      message: Prusa Mini material has been unloaded during print
+      title: Prusa Mini Unloaded
+      data:
+        channel: Urgent
+        importance: max
+        image: /api/camera_proxy/camera.octoprint
+        clickAction: /lovelace/printer
+  mode: single
+- id: '1701461491821'
+  alias: Prusa Mini - Status Notification
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - sensor.prusamini_progress
+  - platform: state
+    entity_id:
+    - sensor.prusamini
+    from: printing
+  condition:
+  - alias: Is Available
+    condition: not
+    conditions:
+    - condition: state
+      entity_id: sensor.prusamini
+      state: unavailable
+  action:
+  - service: notify.mobile_app_torkild_s_pixel_7
+    data:
+      title: "{% if is_state('sensor.prusamini', 'printing') %}\n  {{states('sensor.prusamini_filename')}}\n{%
+        else %}\n  Prusa Mini\n{% endif %}"
+      message: "{% if is_state('sensor.prusamini', 'printing') %}\n  {{ states('sensor.prusamini_progress')
+        }}%, ETA: {{\n  (as_timestamp(states('sensor.prusamini_print_finish'))-as_timestamp(now()))
+        | timestamp_custom('%H:%M', false)}} left.\n{% else %}\n  {{ states('sensor.prusamini')
+        | title }}\n{% endif %}"
+      data:
+        channel: 3D Printer
+        persistent: true
+        sticky: true
+        importance: medium
+        tag: prusa-mini
+        image: /api/camera_proxy/camera.octoprint
+        clickAction: /lovelace/printer
+    alias: Notify Status
   mode: single

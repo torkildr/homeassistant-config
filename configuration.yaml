@@ -31,7 +31,7 @@ config:
 
 http:
   use_x_forwarded_for: true
-  trusted_proxies: 172.18.0.0/24
+  trusted_proxies: 172.0.0.0/8
 
 conversation:
 
@@ -53,5 +53,4 @@ plant: !include plants.yaml
 script: !include scripts.yaml
 sensor: !include sensors.yaml
 mqtt: !include mqtt.yaml
-binary_sensor: !include binary_sensor.yaml
 light: !include lights.yaml

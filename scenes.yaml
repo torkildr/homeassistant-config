@@ -1,35 +1,125 @@
-- id: "1639119662690"
+- id: '1639119662690'
   name: Hverdag
   entities:
     light.kjeller_vegg:
       brightness: 165
-      state: "on"
+      state: 'on'
     light.kjeller_tak:
       brightness: 255
-      state: "on"
+      state: 'on'
     switch.stalampe:
-      state: "on"
+      state: 'on'
     light.kjokken_stemningslys:
       brightness: 44
-      state: "on"
+      state: 'on'
     light.kjokkenoy:
       brightness: 15
-      state: "on"
+      state: 'on'
     light.kjokken_arbeidslys:
       brightness: 111
-      state: "on"
+      state: 'on'
     light.nuppelampa:
       brightness: 254
-      state: "on"
+      state: 'on'
     light.stue_spot:
       brightness: 116
-      state: "on"
+      state: 'on'
     light.kontor_spot:
       brightness: 242
-      state: "on"
+      state: 'on'
     light.gang_nede:
       brightness: 178
-      state: "on"
+      state: 'on'
     switch.yttergang:
-      state: "on"
+      state: 'on'
   icon: mdi:laptop
+- id: '1699453832782'
+  name: Globus Morgen
+  entities:
+    light.globus:
+      min_color_temp_kelvin: 2202
+      max_color_temp_kelvin: 4000
+      min_mireds: 250
+      max_mireds: 454
+      supported_color_modes:
+      - color_temp
+      - hs
+      color_mode: hs
+      brightness: 76
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 0
+      - 100
+      rgb_color:
+      - 255
+      - 0
+      - 0
+      xy_color:
+      - 0.701
+      - 0.299
+      icon: mdi:globe-model
+      friendly_name: Globus
+      supported_features: 32
+      state: 'on'
+  metadata: {}
+- id: '1699453868316'
+  name: Globus Natt
+  entities:
+    light.globus:
+      min_color_temp_kelvin: 2202
+      max_color_temp_kelvin: 4000
+      min_mireds: 250
+      max_mireds: 454
+      supported_color_modes:
+      - color_temp
+      - hs
+      color_mode: hs
+      brightness: 3
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 239.061
+      - 100
+      rgb_color:
+      - 0
+      - 3
+      - 255
+      xy_color:
+      - 0.136
+      - 0.04
+      icon: mdi:globe-model
+      friendly_name: Globus
+      supported_features: 32
+      state: 'on'
+  metadata: {}
+- id: '1699538553094'
+  name: Globus Dag
+  entities:
+    light.globus:
+      min_color_temp_kelvin: 2202
+      max_color_temp_kelvin: 4000
+      min_mireds: 250
+      max_mireds: 454
+      supported_color_modes:
+      - color_temp
+      - hs
+      color_mode: hs
+      brightness: 51
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 29.186
+      - 16.863
+      rgb_color:
+      - 255
+      - 232
+      - 211
+      xy_color:
+      - 0.365
+      - 0.349
+      icon: mdi:globe-model
+      friendly_name: Globus
+      supported_features: 32
+      state: 'on'
+  metadata: {}
