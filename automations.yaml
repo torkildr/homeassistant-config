@@ -265,20 +265,6 @@
     entity_id: switch.popp_smart_outdoor_plug_ip44_rated
     domain: switch
   mode: single
-- id: '1638961078194'
-  alias: UniFi Protect Doorbell Notifications
-  description: ''
-  use_blueprint:
-    path: briis/push_notification_doorbell_event.yaml
-    input:
-      doorbell: binary_sensor.doorbell_doorbell
-      lock_entity: lock.hoveddor
-      time_format: '%H:%M'
-      base_ha_url: https://pz7cv2ag25qss8qgtihrgix7y08kr07d.ui.nabu.casa
-      base_image_url: https://pz7cv2ag25qss8qgtihrgix7y08kr07d.ui.nabu.casa
-      lovelace_view: /lovelace/door
-      tts_target: cloud_say
-      lock_tts: Døren blir nå låst opp
 - id: '1664892858557'
   alias: Prusa Mini - Octoprint Idle
   description: ''
@@ -600,7 +586,7 @@
       entity_id: sensor.prusamini
       state: unavailable
   action:
-  - service: notify.mobile_app_torkild_s_pixel_7
+  - service: notify.mobile_app_pixel_7
     data:
       title: "{% if is_state('sensor.prusamini', 'printing') %}\n  {{states('sensor.prusamini_filename')}}\n{%
         else %}\n  Prusa Mini\n{% endif %}"
@@ -613,6 +599,74 @@
         persistent: true
         sticky: true
         importance: medium
+        tag: prusa-mini
+        image: /api/camera_proxy/camera.octoprint
+        clickAction: /lovelace/printer
+    alias: Notify Status
+  mode: single
+- id: '1710182100943'
+  alias: Screens - Åpne på kvelden
+  description: ''
+  trigger:
+  - platform: sun
+    event: sunset
+    offset: 00:10:00
+  condition: []
+  action:
+  - service: cover.open_cover
+    metadata: {}
+    data: {}
+    target:
+      device_id:
+      - 75d8c4a9779dc4454e1983e8c098a2db
+      - e0f6c68e77d712699591ff64bfa70850
+  mode: single
+- id: '1713685970398'
+  alias: Screens - Lukke når mye lys
+  description: ''
+  trigger:
+  - type: illuminance
+    platform: device
+    device_id: 2f5c8e67bac175a2c310ed3f12c7303c
+    entity_id: 204300b43b083489f0a7bdaac174f11e
+    domain: sensor
+    above: 20000
+    for:
+      hours: 0
+      minutes: 5
+      seconds: 0
+  condition:
+  - condition: time
+    after: '12:00:00'
+    before: '20:00:00'
+  action:
+  - service: cover.close_cover
+    metadata: {}
+    data: {}
+    target:
+      device_id:
+      - 75d8c4a9779dc4454e1983e8c098a2db
+      - e0f6c68e77d712699591ff64bfa70850
+  mode: single
+- id: '1717057766861'
+  alias: Prusa Mini - Attention
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - sensor.prusamini
+    to: attention
+  condition: []
+  action:
+  - service: notify.mobile_app_pixel_7
+    data:
+      title: Prusa Mini
+      message: Printer needs your attention!
+      data:
+        channel: 3D Printer Attention
+        persistent: true
+        sticky: true
+        importance: high
         tag: prusa-mini
         image: /api/camera_proxy/camera.octoprint
         clickAction: /lovelace/printer
