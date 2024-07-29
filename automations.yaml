@@ -17,21 +17,7 @@
     platform: state
     from: 'on'
     to: 'off'
-  condition:
-  - alias: Not Printing
-    condition: not
-    conditions:
-    - condition: or
-      conditions:
-      - condition: state
-        entity_id: binary_sensor.octoprint_printing
-        state: 'on'
-        alias: OctoPrint Printing
-      - condition: state
-        entity_id: sensor.prusamini
-        state: printing
-        alias: Prusa Mini Printing
-      alias: OctoPrint or Prusa Mini
+  condition: []
   action:
   - data:
       entity_id: scene.kjeller_bod_av
@@ -266,24 +252,21 @@
     domain: switch
   mode: single
 - id: '1664892858557'
-  alias: Prusa Mini - Octoprint Idle
+  alias: Bambu Lab P1S - Idle
   description: ''
   trigger:
   - platform: state
     entity_id:
-    - sensor.octoprint_current_state
-    from: Printing
+    - sensor.bambu_lab_p1s_current_stage
     for:
       hours: 1
       minutes: 0
       seconds: 0
+    to: idle
   condition:
-  - condition: not
-    conditions:
-    - condition: state
-      entity_id: sensor.octoprint_current_state
-      state: Printing
-    alias: Not printing
+  - condition: state
+    entity_id: sensor.bambu_lab_p1s_current_stage
+    state: idle
   action:
   - service: switch.turn_off
     data: {}
@@ -544,29 +527,6 @@
       device_id: 455aa6d98d3d51d313c2c555afa11682
     enabled: true
   mode: single
-- id: '1701376347401'
-  alias: Prusa Mini - Material Unloaded
-  description: ''
-  trigger:
-  - platform: state
-    entity_id:
-    - sensor.prusamini_material
-    to: '---'
-  condition:
-  - condition: state
-    entity_id: sensor.prusamini
-    state: printing
-  action:
-  - service: notify.mobile_app_torkild_s_pixel_7
-    data:
-      message: Prusa Mini material has been unloaded during print
-      title: Prusa Mini Unloaded
-      data:
-        channel: Urgent
-        importance: max
-        image: /api/camera_proxy/camera.octoprint
-        clickAction: /lovelace/printer
-  mode: single
 - id: '1701461491821'
   alias: Prusa Mini - Status Notification
   description: ''
@@ -649,26 +609,80 @@
       - e0f6c68e77d712699591ff64bfa70850
   mode: single
 - id: '1717057766861'
-  alias: Prusa Mini - Attention
+  alias: Bambu Lab P1S - Problem
   description: ''
   trigger:
   - platform: state
     entity_id:
-    - sensor.prusamini
-    to: attention
+    - binary_sensor.bambu_lab_p1s_hms_errors
+    to: 'on'
   condition: []
   action:
-  - service: notify.mobile_app_pixel_7
+  - alias: Notify Status
+    service: notify.mobile_app_pixel_7
     data:
-      title: Prusa Mini
+      title: Bambu Lab P1S
       message: Printer needs your attention!
       data:
         channel: 3D Printer Attention
         persistent: true
         sticky: true
         importance: high
-        tag: prusa-mini
+        tag: 3d-printer
         image: /api/camera_proxy/camera.octoprint
-        clickAction: /lovelace/printer
+        clickAction: /lovelace/3d-printer
+  mode: single
+- id: '1720001919454'
+  alias: Bambu Lab P1S - Status
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - sensor.bambu_lab_p1s_print_progress
+    - sensor.bambu_lab_p1s_task_name
+  condition:
+  - condition: not
+    conditions:
+    - condition: state
+      entity_id: sensor.bambu_lab_p1s_print_progress
+      state: unknown
+  action:
+  - service: notify.mobile_app_pixel_7
+    data:
+      title: "{% if is_state('sensor.bambu_lab_p1s_task_name', 'unavailable') %}\n
+        \ Bambu Lab P1S\n{% else %}\n  {% if has_value('sensor.bambu_lab_p1s_print_progress')
+        %}{{states('sensor.bambu_lab_p1s_print_progress')}}% - {% endif %}{{states('sensor.bambu_lab_p1s_task_name')
+        | title}}\n{% endif %}"
+      message: "{% if is_state('sensor.bambu_lab_p1s_task_name', 'unavailable') %}\n
+        \ {{states('bambu_lab_p1s_current_stage') | title}}\n{% else %}\n  {{states('sensor.bambu_lab_p1s_current_stage')
+        | title}}\n  ETA: {{ int(as_timestamp(now()) + int(states('sensor.bambu_lab_p1s_remaining_time'))*60)
+        | timestamp_custom('%H:%M', true) }}\n{% endif %}"
+      data:
+        channel: 3D Printer
+        persistent: true
+        sticky: true
+        importance: medium
+        tag: 3d-printer
+        image: /api/camera_proxy/camera.octoprint
+        clickAction: /lovelace/3d-printer
     alias: Notify Status
+  mode: single
+- id: '1721144982237'
+  alias: Person Detected
+  description: ''
+  trigger:
+  - type: turned_on
+    platform: device
+    device_id: 4998f70dee450c2aedc4987454e7bdc0
+    entity_id: 32afedc40f7c62baf83e708a0e927a3f
+    domain: binary_sensor
+  condition: []
+  action:
+  - service: notify.mobile_app_pixel_7
+    data:
+      message: Person detected
+      data:
+        importance: high
+        tag: person-detected
+        image: /api/camera_proxy/camera.doorbell
   mode: single

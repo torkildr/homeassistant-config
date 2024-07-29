@@ -173,3 +173,12 @@ juletre_pa:
           milliseconds: 0
   mode: single
   icon: mdi:string-lights
+barnerom_dim_til_av:
+  alias: Barnerom dim til av
+  sequence:
+  - service: light.turn_off
+    target:
+      device_id: ce250696d2c1b8b94bfc984363498448
+    data:
+      transition: 60
+  description: ''
