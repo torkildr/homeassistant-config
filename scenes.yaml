@@ -75,19 +75,19 @@
       - color_temp
       - hs
       color_mode: hs
-      brightness: 3
+      brightness: 74
       color_temp_kelvin:
       color_temp:
       hs_color:
-      - 239.061
-      - 100
+      - 217
+      - 62.999
       rgb_color:
-      - 0
-      - 3
+      - 94
+      - 155
       - 255
       xy_color:
-      - 0.136
-      - 0.04
+      - 0.18
+      - 0.187
       icon: mdi:globe-model
       friendly_name: Globus
       supported_features: 32

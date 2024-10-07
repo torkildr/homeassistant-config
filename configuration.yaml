@@ -21,13 +21,6 @@ emulated_hue:
   listen_port: 8300
   expose_by_default: false
 
-notify:
-  - platform: html5
-    name: web
-    vapid_email: !secret vapid_email
-    vapid_pub_key: !secret vapid_pub_key
-    vapid_prv_key: !secret vapid_prv_key
-
 config:
 
 http:

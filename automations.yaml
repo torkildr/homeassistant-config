@@ -646,6 +646,9 @@
     - condition: state
       entity_id: sensor.bambu_lab_p1s_print_progress
       state: unknown
+    - condition: state
+      entity_id: automation.bambu_lab_p1s_status
+      state: unknown
   action:
   - service: notify.mobile_app_pixel_7
     data:

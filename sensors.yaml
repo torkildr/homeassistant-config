@@ -10,3 +10,5 @@
   stop_ids:
     - "NSR:StopPlace:59637" # Rosenholm
     - "NSR:StopPlace:5683" # Nordbråtan
+    - "NSR:StopPlace:6743" # Trygve Strømbergs vei
+
